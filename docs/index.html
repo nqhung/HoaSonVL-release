@@ -50,7 +50,7 @@ figure{margin:0}
 .box.warn{background:var(--warn-bg);color:var(--ink);border-left:4px solid var(--warn)}
 .box b{font-weight:700}
 .tip{font-size:13.5px;color:var(--muted)}
-ul{margin:6px 0 6px 20px;padding:0;max-width:72ch}
+ul,ol{margin:6px 0 6px 20px;padding:0;max-width:72ch}
 li{margin:3px 0}
 table{border-collapse:collapse;font-size:13.5px;margin:10px 0;max-width:100%}
 th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -87,6 +87,7 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
   <div class="grp">Sáu tab</div>
   <a href="#tacvu">Tác vụ</a>
   <a class="sub" href="#hop">· Hộp riêng của từng tác vụ</a>
+  <a class="sub" href="#truongca">· Trường Ca (chiến đội)</a>
   <a class="sub" href="#todoi">· Tổ đội, theo sau</a>
   <a class="sub" href="#thuong">· Thưởng, tiện ích</a>
   <a href="#luyencong">L. công</a>
@@ -164,7 +165,8 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 <b>Bấm vào dòng</b><span>Chọn nhân vật để xem và sửa thiết lập ở các tab. Giữ <kbd>Ctrl</kbd> hoặc <kbd>Shift</kbd> để chọn nhiều nhân vật và sửa cùng lúc một ô (ví dụ bật Tự theo sau cho cả nhóm).</span>
 <b>Kéo thả dòng</b><span>Đổi thứ tự nhân vật trong bảng.</span>
 <b>Bấm đúp vào dòng</b><span>Ẩn hoặc hiện lại cửa sổ game của nhân vật đó. Tiện khi chạy nhiều game mà màn hình chật.</span>
-<b>Chuột phải vào bảng</b><span>Mở hộp "Tùy chọn hiển thị" để chọn cột nào hiện (ảnh bên dưới). Kéo tiêu đề cột để đổi chỗ, kéo mép để đổi rộng.</span>
+<b>Chuột phải vào tiêu đề cột</b><span>Mở hộp "Tùy chọn hiển thị" để chọn cột nào hiện (ảnh bên dưới). Kéo tiêu đề cột để đổi chỗ, kéo mép để đổi rộng.</span>
+<b>Chuột phải vào dòng</b><span>Menu của các dòng đang chọn: thêm / xoá nhân vật, đăng nhập, gán proxy, lập chiến đội Trường Ca (mục <a href="#truongca">Trường Ca</a>)…</span>
 <b>Bấm đúp thanh tiêu đề</b><span>Chuyển sang giao diện rộng: bảng chiếm bên trái với đủ cột, bên phải là bản đồ nhỏ của nhân vật đang chọn (chấm xanh là mình, chấm khác là người / quái quanh) và các tab. Bấm đúp lần nữa để về cửa sổ hẹp.</span>
 <b>Cột Tác vụ</b><span>Việc bot đang làm, tóm tắt một dòng, ví dụ "luyện công", "mua thuốc", "theo sau X", "tắt (chưa tick)".</span>
 </div>
@@ -216,8 +218,9 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 <tr><td>Năng động</td><td>Làm các hoạt động được tick trong hộp riêng cho tới khi đủ điểm năng động giới hạn.</td></tr>
 <tr><td>Đào kho báu</td><td>Dùng Tàng Bảo Đồ trong túi: đi tới chỗ đào, đào, nộp.</td></tr>
 <tr><td>Liên đấu, Tống Kim (BD), Hoa Đăng, Cấm Địa Phái</td><td>Đến giờ thì đi báo danh, vào trận và đánh. Tống Kim có hộp riêng chọn bên báo danh. Chuột phải: hẹn giờ.</td></tr>
+<tr><td>Trường Ca</td><td>Cả chiến đội (tối đa 6) vào Trường Ca Sơn Trang luyện công kinh nghiệm cao. Lập chiến đội ở bảng nhân vật, chuột phải dòng để thiết lập. Xem mục <a href="#truongca">Trường Ca</a>.</td></tr>
 <tr><td>Nhận thưởng Thẻ tháng, Nhận buff Bang hội, Hít lửa trại</td><td>Các việc nhỏ mỗi ngày: tới Lễ Quan nhận thưởng thẻ tháng, nhận buff bang, đứng cạnh lửa trại.</td></tr>
-<tr><td>Trường Ca, Phong Lăng Độ, Bán hàng, Chiến lệnh</td><td>Ghi "(sắp có)": chưa làm được trong bản này, tick cũng không có tác dụng.</td></tr>
+<tr><td>Phong Lăng Độ, Bán hàng, Chiến lệnh</td><td>Ghi "(sắp có)": chưa làm được trong bản này, tick cũng không có tác dụng.</td></tr>
 </table></div>
 <p class="tip">Chuột phải vào một dòng (trừ Luyện công) để mở hộp thiết lập riêng của tác vụ đó, xem mục kế tiếp.</p>
 </div></div>
@@ -278,6 +281,59 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 <b>Ăn Tiên Thảo Lộ, Năng động 25 điểm, Lập đội</b><span>Ba việc mỗi ngày của nhân vật mới; Năng động làm Hằng ngày, Mặc Thạch, Môn phái. Lập đội và mời người quanh mình khi trang Tổ đội để trống.</span>
 <b>Tiền giữ trong túi, rút, Ngọc Lộ Hoàn</b><span>Giữ bao nhiêu tiền trong túi (thừa gửi rương), rút bao nhiêu để mua, mua bao nhiêu Ngọc Lộ Hoàn (Tiểu) khi hết và ngưỡng mua bình máu / nội lực khi thiếu tiền.</span>
 </div>
+</div></div>
+
+<h3 id="truongca">Trường Ca (chiến đội)</h3>
+<p class="lead">Trường Ca Sơn Trang là bản đồ luyện công kinh nghiệm cao, mở bằng <b>Tín Vật Trường Ca</b> ở NPC <b>Trường Ca Môn Môn Nhân</b> của 7 thành lớn. Một chiến đội tối đa 6 người: người mở nhận x8 kinh nghiệm, người khác x4 (nộp thêm Tín Vật để lên x8). Tính năng mới, có từ bản sau 1.4.0.</p>
+<div class="sec">
+<figure class="shot"><img src="img/hop-chiendoi.png" alt="Hộp Lập chiến đội Trường Ca: thành viên, đội trưởng, thành mở, giờ mở tối đa, tick tác vụ cho cả nhóm" width="396" height="369"><figcaption>Lập chiến đội Trường Ca. Ảnh chụp lúc các dòng nhân vật chưa tick: hộp ghi lý do từng người và nút OK mờ.</figcaption></figure>
+<div>
+<h4>Bước 1: lập chiến đội từ bảng nhân vật</h4>
+<p>Giữ <kbd>Ctrl</kbd> chọn 1–6 nhân vật trong bảng, rồi <b>chuột phải lên nhân vật sẽ mở sơn trang</b> và chọn <b>Lập chiến đội Trường Ca...</b>. Cả nhóm nhận chung một danh sách, người mở đứng đầu.</p>
+<div class="ctl">
+<b>Đội trưởng</b><span>Người mở sơn trang, cũng là đội trưởng tổ đội. Mặc định là dòng vừa bấm chuột phải. Người này cần có Tín Vật (để ở túi hành trang cũng được, bot tự lấy ra túi đạo cụ khi mở).</span>
+<b>Thành mở</b><span>Thành có Trường Ca Môn Môn Nhân mà cả nhóm tới.</span>
+<b>Giờ mở tối đa</b><span>2, 4 hoặc 6 giờ (1 Tín Vật mở 2 giờ, mỗi Tín Vật nộp thêm +2 giờ). Đây là mức tối đa: số thật do thời gian tu luyện còn lại của cả nhóm quyết định lúc tập trung.</span>
+<b>Tick tác vụ</b><span>Tick tác vụ Trường Ca cho cả nhóm (mặc định có).</span>
+</div>
+<p>Mỗi người trong danh sách phải đạt cả bốn điều kiện, nếu không bot từ chối và ghi lý do:</p>
+<ul>
+<li>Đã mở game và đã vào game.</li>
+<li>Dòng nhân vật đang tick (bot điều khiển).</li>
+<li>Không bận: đang Luyện công, ngồi hồi, đứng không hoặc làm việc vặt vài giây là rảnh; đang làm nhiệm vụ, sự kiện hay Auto PK là bận.</li>
+<li>Không thuộc chiến đội đang đi Trường Ca.</li>
+</ul>
+<div class="ctl">
+<b>Làm đội trưởng Trường Ca</b><span>Chuột phải lên một nhân vật trong nhóm: đưa người đó lên đầu danh sách của cả nhóm (người mở mới).</span>
+<b>Giải tán chiến đội Trường Ca...</b><span>Bỏ danh sách và bỏ tick Trường Ca của cả nhóm (hỏi trước).</span>
+</div>
+<div class="box"><b>Mỗi nhân vật chỉ ở một chiến đội.</b> Lập nhóm mới mà lấy người của nhóm khác thì người đó chuyển sang nhóm mới; nhóm cũ không còn đủ người nên <b>giải tán</b> (bỏ tick Trường Ca), cần thì lập lại cho đủ. Hộp ghi rõ ai chuyển, nhóm nào giải tán trước khi bấm OK. Nhóm đang đi Trường Ca thì <b>không lập / đổi được</b>: chờ xong buổi.</div>
+</div></div>
+<div class="sec">
+<figure class="shot"><img src="img/hop-truongca.png" alt="Hộp Trường Ca: thành mở, thành viên, giờ mở tối đa, nộp Tín Vật x8, Ngọc Lộ Hoàn, tiền sửa đồ, hẹn giờ" width="416" height="509"><figcaption>Hộp Trường Ca (chuột phải dòng Trường Ca ở tab Tác vụ).</figcaption></figure>
+<div>
+<h4>Bước 2: thiết lập riêng (chuột phải dòng Trường Ca)</h4>
+<div class="ctl">
+<b>Thành mở, Thành viên, Giờ mở tối đa</b><span>Như hộp Lập chiến đội. Mỗi dòng một tên, dòng đầu là người mở. Sửa ở đây cũng theo đúng luật nhóm ở trên và chép sang cả nhóm.</span>
+<b>Thành viên nộp Tín Vật để nhận x8</b><span>Riêng từng người (0–3). Thành viên nộp ở NPC trước khi vào, mỗi Tín Vật cho 1 giờ hiệu quả x2 (từ x4 lên x8).</span>
+<b>Mang Ngọc Lộ Hoàn-Lâu (Đại)</b><span>Mua số giờ × 2 bình trước lần vào đầu tiên trong ngày (mỗi bình 30 phút), chỉ ăn khi đã ở trong sơn trang. Mặc định tick; thay dòng mua thuốc của Hậu cần cho chuyến này.</span>
+<b>Mang tiền sửa đồ</b><span>Mang theo 5 vạn mỗi giờ, thêm 10 vạn mỗi giờ cho mỗi món Hoàng Kim đang mặc (không tính nhẫn, hạng liên, ngọc bội). Ví dụ 3 món Hoàng Kim, đi 4 giờ: 3 × 4 × 10 + 4 × 5 = 140 vạn. Mặc định tick; thay "Gửi tiền" của Hậu cần cho chuyến này.</span>
+<b>Hẹn giờ</b><span>Như các tác vụ khác.</span>
+</div>
+<p class="tip">Bỏ tick hai ô Ngọc Lộ Hoàn / tiền: bot dùng thiết lập Mua thuốc và Gửi tiền của tab Hậu cần như bình thường. Nhớ xếp Trường Ca <b>trên</b> Luyện công trong danh sách tác vụ của người mở.</p>
+</div></div>
+<div class="sec wide"><div>
+<h4>Một chuyến đi diễn ra thế nào</h4>
+<ol>
+<li><b>Tập trung.</b> Người mở tới NPC ở thành đã chọn; các thành viên bỏ việc đang làm và tới ngay. Mỗi người hỏi NPC "Kiểm tra thời gian tu luyện".</li>
+<li><b>Đồng bộ điều kiện.</b> Người mở chờ tối đa 10 phút cho cả danh sách vào đội và có số thời gian. Số Tín Vật dùng = theo thời gian tu luyện <b>còn ít nhất</b> trong nhóm (mỗi Tín Vật 2 giờ), không quá Giờ mở tối đa, số Tín Vật đang có và 3 Tín Vật mỗi ngày.</li>
+<li><b>Huỷ chuyến</b> khi: có người còn dưới 2 giờ tu luyện (người mở cần hơn 2 giờ), quá 10 phút vẫn thiếu người, hoặc có người đã xong Trường Ca hôm nay. Cả nhóm tính là xong hôm nay và quay về Luyện công / tác vụ đang tick; hôm sau tự thử lại.</li>
+<li><b>Mở.</b> Người mở chọn "Ta muốn mở Trường Ca Sơn Trang", vào sơn trang, rồi ra qua Bia Đá nộp thêm Tín Vật ("Tăng thời gian Trường Ca Sơn Trang đã mở") và vào lại. Các thành viên vào bằng "Ta muốn vào Trường Ca Sơn Trang đã mở" → dòng tên người mở → "Vào".</li>
+<li><b>Trong sơn trang.</b> Luyện công quanh 5 điểm (chưa có quái thì đứng chờ ở điểm gần nhất). Dùng hàng kỹ năng / vật phẩm có Hoạt động "Trường Ca" nếu có, không thì hàng Luyện công. Các tác vụ khác tạm tắt. Luôn chung tổ đội với người mở.</li>
+<li><b>Máu thấp, cần về thành.</b> Sơn trang cấm phù về thành, Thổ Địa Phù, Tiên Thảo Lộ. Máu dưới mốc TĐP, hết bình, đầy túi…: bot chạy ra Bia Đá, mua đồ, hồi máu rồi vào lại.</li>
+<li><b>Rớt mạng, chết, bị đưa ra.</b> Vào lại cùng cách. Người vào lại bị game xếp vào đội cũ thì tự rời ra, vào đội người mở. Không còn thấy tên người mở trong danh sách (sơn trang hết giờ) thì xong hôm nay.</li>
+</ol>
+<div class="box warn"><b>Thời gian tu luyện</b> do máy chủ giữ: mỗi ngày cộng 2 giờ, tối đa 10 giờ, trừ từng phút ở trong sơn trang. Buổi kéo qua 0h thì phần sau 0h trừ vào ngày mới. Ví dụ 22h còn 6 giờ, mở 6 giờ: tới 4h sáng ngày mới chỉ còn 2 giờ, không đủ mở thêm.</div>
 </div></div>
 
 <h3 id="todoi">Trang con: Tổ đội, theo sau</h3>
