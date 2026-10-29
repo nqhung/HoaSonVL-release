@@ -82,6 +82,7 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
   <h1>Hướng dẫn HoaSonVL</h1>
   <div class="v">Bản 1.3.4 · Võ Lâm Truyền Kỳ 2.0</div>
   <a href="#batdau">Bắt đầu</a>
+  <a class="sub" href="#taimoi">· Tải mới và cập nhật</a>
   <a href="#danhsach">Bảng nhân vật</a>
   <div class="grp">Sáu tab</div>
   <a href="#tacvu">Tác vụ</a>
@@ -109,6 +110,23 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 
 <h2 id="batdau">Bắt đầu</h2>
 <p class="lead">HoaSonVL là chương trình chơi tự động cho Võ Lâm Truyền Kỳ 2.0. Nó chạy cạnh game, đọc tình trạng nhân vật và tự làm thay bạn những việc lặp đi lặp lại: luyện công, nhiệm vụ hằng ngày, mua thuốc, sửa đồ, theo sau đồng đội, tự vệ khi bị đánh.</p>
+
+<h3 id="taimoi">Tải mới và cập nhật</h3>
+<h4>Cài lần đầu</h4>
+<ul>
+<li>Vào trang phát hành <a href="https://github.com/nqhung/HoaSonVL-release/releases/latest">github.com/nqhung/HoaSonVL-release/releases/latest</a>, trong mục Assets tải tệp <span class="path">HoaSonPK.zip</span> (tên tệp giữ như cũ, bên trong là HoaSonVL).</li>
+<li>Giải nén ra một thư mục bất kỳ, ví dụ <span class="path">D:\HoaSonVL</span>. Bên trong phải có đủ <span class="path">HoaSonVL.exe</span>, <span class="path">vlhook.dll</span> và <span class="path">data\data.pak</span>; ba tệp này luôn đi cùng nhau, đừng tách ra.</li>
+<li>Mở <span class="path">HoaSonVL.exe</span>. Không cần cài đặt thêm gì, thư mục <span class="path">config\</span> và <span class="path">userdata\</span> sẽ tự sinh.</li>
+<li>Nếu phần mềm diệt virus giữ lại <span class="path">vlhook.dll</span> thì thêm cả thư mục HoaSonVL vào danh sách loại trừ rồi giải nén lại.</li>
+</ul>
+<h4>Cập nhật bản mới</h4>
+<p>Bot tự kiểm tra bản mới sau khi mở khoảng nửa phút, rồi vài giờ một lần. Có bản mới thì hiện hộp "HoaSonVL - cập nhật" ghi số bản và những gì thay đổi, hỏi "Cập nhật ngay?".</p>
+<ul>
+<li>Chọn <b>Yes</b>: bot tải về, tự đóng và mở lại. Các nhân vật đang chạy đứng yên vài giây rồi làm tiếp; game không bị đóng. Thiết lập, lộ trình, danh sách giữ nguyên.</li>
+<li>Chọn <b>No</b>: lần mở sau bot hỏi lại.</li>
+<li>Tệp cũ được giữ lại cạnh chương trình với đuôi <span class="path">.old-…</span> và tự dọn sau.</li>
+</ul>
+<p><b>Cập nhật tay</b> (khi bot không hỏi, hay máy không ra được GitHub): tải <span class="path">HoaSonPK.zip</span> mới nhất ở trang phát hành, tắt HoaSonVL, chép đè ba tệp <span class="path">HoaSonVL.exe</span>, <span class="path">vlhook.dll</span>, <span class="path">data\data.pak</span>. Không chép đè hay xoá <span class="path">config\</span> và <span class="path">userdata\</span>, thiết lập nằm ở đó. Số bản đang dùng hiện trên thanh tiêu đề cửa sổ.</p>
 
 <h3>Thư mục chương trình</h3>
 <div class="tbl"><table>
