@@ -98,7 +98,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <div class="wrap">
 <nav>
   <h1>Hướng dẫn HoaSonVL</h1>
-  <div class="v">Bản 1.4.1 · Võ Lâm Truyền Kỳ 2.0</div>
+  <div class="v">Bản 1.4.2 · Võ Lâm Truyền Kỳ 2.0</div>
   <a href="#batdau">Bắt đầu</a>
   <a class="sub" href="#taimoi">· Tải mới và cập nhật</a>
   <a href="#danhsach">Bảng nhân vật</a>
@@ -161,9 +161,10 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h3>Các bước đầu tiên</h3>
 <ul>
 <li>Mở game và đăng nhập nhân vật như bình thường (hoặc để bot tự mở game, xem tab <a href="#taikhoan">Tài khoản</a>). Mở HoaSonVL, nhân vật sẽ hiện trong bảng ở trên.</li>
+<li>Muốn chạy hơn 8 game trên một máy: mở HoaSonVL <b>trước</b> rồi mới mở game (game tự giới hạn 8 cửa sổ, báo "Cua so game dat gioi han toi da"). Lỡ mở game trước bot thì tắt hết game rồi mở lại khi bot đang chạy.</li>
 <li>Bấm vào tên nhân vật để chọn, rồi đặt thiết lập ở các tab bên dưới. Mỗi nhân vật có thiết lập riêng và được nhớ tự động, không cần bấm lưu.</li>
 <li><b>Tick vào ô vuông trước tên</b> là bật bot cho nhân vật đó. Chưa tick thì bot chỉ xem, không điều khiển gì.</li>
-<li>Rê chuột lên bất kỳ ô nào trong giao diện đều có chú thích ngắn hiện ra. Hướng dẫn này nói kỹ hơn các chú thích đó.</li>
+<li>Rê chuột lên bất kỳ ô nào trong giao diện đều có chú thích ngắn hiện ra, bên ngoài cửa sổ bot (sát mép trái, không đủ chỗ thì mép phải), ngang con trỏ, nên không che ô đang chỉnh. Hướng dẫn này nói kỹ hơn các chú thích đó.</li>
 <li>Bot tự kiểm tra bản mới mỗi vài giờ và hỏi trước khi cập nhật.</li>
 </ul>
 
@@ -177,14 +178,14 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <div class="sec">
 <figure class="shot"><img src="img/rong.png" alt="Giao diện rộng: bảng nhân vật bên trái, bản đồ nhỏ và các tab bên phải" width="1020" height="715"><figcaption>Giao diện rộng (bấm đúp thanh tiêu đề): bảng đầy đủ cột, bản đồ nhỏ, các tab ở bên phải.</figcaption></figure>
 <div>
-<p>Bảng liệt kê mọi nhân vật đang mở game trên máy. Mỗi dòng cho biết nhân vật đang làm gì, ở bản đồ nào, cấp, máu, tiền, số vé… Màu chữ của dòng theo phe hoặc tình trạng; dòng đậm là nhân vật đang được chọn.</p>
+<p>Bảng liệt kê mọi nhân vật đang mở game trên máy, và cả nhân vật bot đã biết mà chưa mở game (dòng "chưa mở game"). Mỗi dòng cho biết nhân vật đang làm gì, ở bản đồ nào (kèm toạ độ như game), cấp, máu, tiền, số vé… Màu chữ cho biết tình trạng: xanh dương là đang trong game; vàng sẫm là được tick mà đang đứng không có việc (hoặc đang tạm dừng); hồng là đội trưởng, hoặc nhân vật tick Đội trưởng ở trang Tổ đội (chữ đậm khi đang dẫn một đội); đỏ là game đã mở mà chưa vào game hoặc mất kết nối; đen là chưa mở game.</p>
 <div class="ctl">
-<b>Tick ô vuông</b><span>Bật / tắt bot cho nhân vật đó. Đây là công tắc quan trọng nhất.</span>
+<b>Tick ô vuông</b><span>Bật / tắt bot cho nhân vật đó. Đây là công tắc quan trọng nhất. Bot nhớ các tick: mở lại bot thì nhân vật đã tick lần trước được tick lại.</span>
 <b>Bấm vào dòng</b><span>Chọn nhân vật để xem và sửa thiết lập ở các tab. Giữ <kbd>Ctrl</kbd> hoặc <kbd>Shift</kbd> để chọn nhiều nhân vật và sửa cùng lúc một ô (ví dụ bật Tự theo sau cho cả nhóm).</span>
 <b>Kéo thả dòng</b><span>Đổi thứ tự nhân vật trong bảng.</span>
 <b>Bấm đúp vào dòng</b><span>Ẩn hoặc hiện lại cửa sổ game của nhân vật đó. Tiện khi chạy nhiều game mà màn hình chật.</span>
 <b>Chuột phải vào tiêu đề cột</b><span>Mở hộp "Tùy chọn hiển thị" để chọn cột nào hiện (ảnh bên dưới). Kéo tiêu đề cột để đổi chỗ, kéo mép để đổi rộng.</span>
-<b>Chuột phải vào dòng</b><span>Menu của các dòng đang chọn: thêm / xoá nhân vật, đăng nhập, gán proxy, lập chiến đội Trường Ca (mục <a href="#truongca">Trường Ca</a>)…</span>
+<b>Chuột phải vào dòng</b><span>Menu của các dòng đang chọn: <b>Thêm...</b> nhân vật chưa mở game (tên + môn phái), <b>Xóa</b> nhân vật chưa mở game (cả thiết lập, hỏi trước); lập chiến đội Trường Ca, làm đội trưởng, giải tán (mục <a href="#truongca">Trường Ca</a>); Lưu / Đọc toàn bộ cấu hình (như Xuất / Nhập thiết lập ở tab Tài khoản); xuất bảng ra tệp CSV (cả bảng hoặc các dòng đã chọn); Tùy chọn hiển thị; Reset thống kê (EXP, Thu nhập, Phù/Chết) cho các dòng đã chọn; Gán proxy / Hủy gán proxy; Đăng nhập (đã chọn, từng nhân vật, tất cả: lần lượt từng người) / Hủy đăng nhập; Thoát game đã chọn (hỏi trước); Nhật ký (mở vlbot.log). Mục chữ xám là chưa dùng được với các dòng đang chọn, hoặc chưa có trong bản này.</span>
 <b>Bấm đúp thanh tiêu đề</b><span>Chuyển sang giao diện rộng: bảng chiếm bên trái với đủ cột, bên phải là bản đồ nhỏ của nhân vật đang chọn (chấm xanh là mình, chấm khác là người / quái quanh) và các tab. Bấm đúp lần nữa để về cửa sổ hẹp.</span>
 <b>Cột Tác vụ</b><span>Việc bot đang làm, tóm tắt một dòng, ví dụ "luyện công", "mua thuốc", "theo sau X", "tắt (chưa tick)".</span>
 </div>
@@ -192,13 +193,16 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <div class="tbl"><table>
 <tr><th>Cột</th><th>Ý nghĩa</th></tr>
 <tr><td>Cấp/EXP</td><td>Cấp và phần trăm kinh nghiệm hiện có.</td></tr>
-<tr><td>EXP/giờ</td><td>Kinh nghiệm kiếm được mỗi giờ từ lúc bật bot. Dùng để so bãi luyện công nào tốt hơn.</td></tr>
+<tr><td>EXP/giờ</td><td>Kinh nghiệm kiếm được mỗi giờ trong ngày (sang ngày mới về 0; tắt mở lại bot vẫn giữ, lúc bot tắt không tính). Bấm tiêu đề cột để đổi sang <b>EXP hôm nay</b> (tổng kinh nghiệm kiếm được trong ngày) và ngược lại. Dùng để so bãi luyện công nào tốt hơn.</td></tr>
 <tr><td>N. động</td><td>Điểm năng động hôm nay.</td></tr>
+<tr><td>HP, MP</td><td>Máu và nội lực hiện có / tối đa.</td></tr>
 <tr><td>Thẻ tháng, Vé MT, NV MT</td><td>Ngày thẻ tháng còn lại, số vé Mặc Thạch, tiến độ nhiệm vụ Mặc Thạch (đã làm / tổng).</td></tr>
 <tr><td>Hồng Ảnh, Trị PK, Xu/KĐ</td><td>Thời gian Hồng Ảnh còn lại, điểm PK, xu và kim đỉnh.</td></tr>
-<tr><td>Phù/Chết</td><td>Số lần về thành bằng phù và số lần chết từ lúc bật bot. Cột này tăng nhanh là bãi đang không an toàn.</td></tr>
-<tr><td>Thu nhập</td><td>Tiền kiếm được từ lúc bật bot.</td></tr>
-<tr><td>CPU/RAM, Proxy</td><td>Game đó đang tốn bao nhiêu máy và đi qua proxy nào.</td></tr>
+<tr><td>Tổ đội</td><td>"đội trưởng" nếu nhân vật đang dẫn đội, không thì tên đội trưởng; trong ngoặc là số người trong đội.</td></tr>
+<tr><td>Phù/Chết</td><td>Số lần về thành bằng phù và số lần chết trong ngày (sang ngày mới về 0, tắt mở lại bot vẫn giữ). Cột này tăng nhanh là bãi đang không an toàn.</td></tr>
+<tr><td>Ngân lượng</td><td>Tiền trong hành trang cộng tiền trong rương, tính bằng vạn.</td></tr>
+<tr><td>Thu nhập</td><td>Tiền kiếm được hôm nay (tính cả tiền trong rương), sang ngày mới về 0.</td></tr>
+<tr><td>CPU/RAM, Proxy</td><td>Game đó đang tốn bao nhiêu máy (CPU, RAM, số khung hình mỗi giây, KB/s nhận ↓ / gửi ↑) và đi qua proxy nào, kèm tình trạng: ổn, chập chờn, LỖI, chờ đăng nhập, đang gắn. Có tên một chương trình proxy ngoài (như Proxifier) là chương trình đó cũng đang điều hướng game; "⚠ chồng" là nó chồng lên proxy của bot.</td></tr>
 </table></div>
 </div></div>
 
@@ -206,7 +210,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h2 id="tacvu">Tab Tác vụ</h2>
 <p class="lead">Tab mở đầu: chọn bot làm việc gì, theo thứ tự nào, và vài công tắc chung dùng cho mọi việc.</p>
 <div class="sec">
-<figure class="shot"><img src="img/tab-tacvu.png" alt="Tab Tác vụ: Auto PK, Chung, Tác vụ hàng ngày" width="320" height="817"><figcaption>Tab Tác vụ.</figcaption></figure>
+<figure class="shot"><img src="img/tab-tacvu.png" alt="Tab Tác vụ: Auto PK, Chung, Tác vụ hàng ngày" width="320" height="825"><figcaption>Tab Tác vụ.</figcaption></figure>
 <div>
 <h4>Khung Auto PK</h4>
 <p>Dành cho lúc bạn tự cầm chuột đánh nhau (công thành, săn boss, Tống Kim). Bật lên là bot <b>bỏ mọi tác vụ</b> khác, bạn tự đi, bot chỉ lo ra chiêu.</p>
@@ -231,14 +235,18 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <div class="tbl"><table>
 <tr><th>Tác vụ</th><th>Bot làm gì</th></tr>
 <tr><td>Luyện công</td><td>Đánh quái theo tab L. công. Về thành mua thuốc, sửa đồ khi cần rồi quay lại bãi.</td></tr>
-<tr><td>Luyện công Tân thủ</td><td>Cho nhân vật mới: tự chọn bãi theo cấp, tự cộng điểm, tự mặc đồ nhặt được, tự ăn Tiên Thảo Lộ, tự lập đội. Chuột phải để đặt môn phái và cách cộng điểm.</td></tr>
-<tr><td>NV Môn phái, NV Hằng ngày, NV Mặc Thạch</td><td>Nhận, làm và trả nhiệm vụ. Hằng ngày và Mặc Thạch có hộp riêng để chọn bản đồ nhận, mua / lấy trang bị cần nộp.</td></tr>
+<tr><td>Luyện công Tân thủ</td><td>Cho nhân vật mới (dưới cấp 60): làm chuỗi nhiệm vụ tân thủ của Bao Thập Bát (cấp 10 vào môn phái đã chọn), tự chọn bãi theo cấp, tự cộng điểm, tự mặc đồ nhặt được, tự ăn Tiên Thảo Lộ, tự lập đội. Chuột phải để chọn môn phái - nhánh (chưa chọn thì tác vụ không chạy) và cách cộng điểm. Chỉ tick được một trong hai: Luyện công hoặc Luyện công Tân thủ; tick cái này thì cái kia tự bỏ tick.</td></tr>
+<tr><td>NV Môn phái, NV Hằng ngày, NV Mặc Thạch</td><td>Nhận, làm và trả nhiệm vụ. Hằng ngày và Mặc Thạch có hộp riêng để chọn bản đồ nhận và nơi lấy trang bị cần nộp; riêng Mặc Thạch còn mua (NPC, sạp người chơi) hoặc rèn món đó.</td></tr>
 <tr><td>Năng động</td><td>Làm các hoạt động được tick trong hộp riêng cho tới khi đủ điểm năng động giới hạn.</td></tr>
-<tr><td>Đào kho báu</td><td>Dùng Tàng Bảo Đồ trong túi: đi tới chỗ đào, đào, nộp.</td></tr>
-<tr><td>Liên đấu, Tống Kim (BD), Hoa Đăng, Cấm Địa Phái</td><td>Đến giờ thì đi báo danh, vào trận và đánh. Tống Kim có hộp riêng chọn bên báo danh. Chuột phải: hẹn giờ.</td></tr>
+<tr><td>Đào kho báu</td><td>Dùng Tàng Bảo Đồ trong túi (thiếu thì mở Túi Thần Bí), nhờ Phó Lôi Thư ở Long Tuyền Thôn giám định (2 vạn mỗi tấm), rồi đi tới chỗ đào và đào. Chuột phải: số tấm mỗi ngày, tiền giữ lại, hẹn giờ.</td></tr>
+<tr><td>Liên đấu, Cấm Địa Phái</td><td>Đến giờ thì đi báo danh, vào trận và đánh. Chuột phải: hẹn giờ.</td></tr>
+<tr><td>Tống Kim (BD)</td><td>Mỗi trận trong ngày (13:30, 20:00, 22:15): tới quan báo danh theo bên đã chọn, vào chiến trường là tính đã đi trận đó, rồi ra làm việc khác. Bot không ở lại đánh; muốn đánh trong trận thì bật Auto PK. Chuột phải: bên báo danh, hẹn giờ.</td></tr>
+<tr><td>Hoa Đăng</td><td>Từ 19:00 tới 23:00: tới đèn Hoa Đăng Huy Hoàng (Hoa Sơn, Vũ Lăng Sơn hoặc Nhạn Đãng Sơn; mỗi nhân vật luôn một nơi, không thấy đèn thì sang nơi khác) và trả lời câu đố tới khi xong lượt hôm nay. Câu chưa biết thì chọn đáp án chưa từng sai, rồi nhớ đáp án đúng / sai cho mọi nhân vật. Có đáp án mà chưa đọc được câu hỏi: chờ 8 giây rồi chọn một đáp án. Gặp 3 hội thoại lạ: nghỉ 10 phút rồi thử lại. Chuột phải: hẹn giờ.</td></tr>
 <tr><td>Trường Ca</td><td>Cả chiến đội (tối đa 6) vào Trường Ca Sơn Trang luyện công kinh nghiệm cao. Lập chiến đội ở bảng nhân vật, chuột phải dòng để thiết lập. Xem mục <a href="#truongca">Trường Ca</a>.</td></tr>
 <tr><td>Nhận thưởng Thẻ tháng, Nhận buff Bang hội, Hít lửa trại</td><td>Các việc nhỏ mỗi ngày: tới Lễ Quan nhận thưởng thẻ tháng, nhận buff bang, đứng cạnh lửa trại.</td></tr>
-<tr><td>Phong Lăng Độ, Bán hàng, Chiến lệnh</td><td>Ghi "(sắp có)": chưa làm được trong bản này, tick cũng không có tác dụng.</td></tr>
+<tr><td>Phong Lăng Độ</td><td>Đi mọi chuyến thuyền trong hẹn giờ (10:00, 13:00, 16:00, 19:00, 21:00, 23:00; lên thuyền từ HH:00 tới HH:10): mua thuốc nếu thiếu, tới bến ở Phong Lăng Độ, gặp Thuyền Phu, đến giờ thì lên thuyền. Trên thuyền luyện công quanh boong theo thiết lập Luyện công tới khi cập bờ, rồi về thành lưu rương lại (lên thuyền là điểm lưu bị đặt ở Tây Sơn Thôn). Dòng ghi số chuyến đã đi hôm nay / 6. Chuột phải: bến thuyền, hẹn giờ.</td></tr>
+<tr><td>Chiến lệnh</td><td>Làm nhiệm vụ ngày của Chiến Lệnh bằng các tác vụ bot có: Tống Kim đủ 3 trận, Phong Lăng Độ 1 chuyến trọn, NV Mặc Thạch 10 mỗi ngày (thứ 2 thêm 30). Ngoài mùa Chiến Lệnh thì không làm gì. Chuột phải: chọn việc, nhận thưởng.</td></tr>
+<tr><td>Bán hàng</td><td>Ghi "(sắp có)": chưa làm được trong bản này, không tick được.</td></tr>
 </table></div>
 <p class="tip">Chuột phải vào một dòng (trừ Luyện công) để mở hộp thiết lập riêng của tác vụ đó, xem mục kế tiếp.</p>
 </div></div>
@@ -248,13 +256,14 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <figure class="shot"><img src="img/hop-hengio.png" alt="Hộp Hẹn giờ của NV Môn phái" width="316" height="197"><figcaption>Hẹn giờ. Mọi tác vụ không có hộp riêng đều mở hộp này.</figcaption></figure>
 <div>
 <h4>Hẹn giờ</h4>
-<p>Không tick: bot làm tác vụ theo giờ mặc định của nó. Tick: chỉ làm trong khung giờ đã đặt; đặt giờ kết thúc nhỏ hơn giờ bắt đầu nghĩa là qua nửa đêm. Ô <b>Lệch</b> cho mỗi nhân vật đi sớm hay muộn vài phút để nhiều nhân vật không cùng xếp hàng một lúc (số âm là đi sớm, số dương là muộn).</p>
+<p>Không tick: bot làm tác vụ theo giờ mặc định của nó. Tick: chỉ làm trong khung giờ đã đặt; đặt giờ kết thúc nhỏ hơn giờ bắt đầu nghĩa là qua nửa đêm. Ô <b>Lệch</b> (-30 đến 30 phút) cho mỗi nhân vật đi sớm hay muộn vài phút để nhiều nhân vật không cùng xếp hàng một lúc (số âm là đi sớm, số dương là muộn). Ô này chỉ có ở tác vụ có giờ mở (Tống Kim, Liên đấu, Hoa Đăng, Phong Lăng Độ, Hít lửa trại, Cấm Địa Phái) và tác vụ sang ngày mới lúc 0 giờ (NV Môn phái, NV Hằng ngày, NV Mặc Thạch, Nhận thưởng Thẻ tháng); ở nhóm sau, Lệch dương là chờ thêm từng ấy phút sau 0 giờ, Lệch âm không có tác dụng.</p>
 </div></div>
 <div class="sec">
 <figure class="shot"><img src="img/hop-nangdong.png" alt="Hộp Năng động: chọn hoạt động và giới hạn điểm" width="316" height="239"><figcaption>Năng động.</figcaption></figure>
 <div>
 <h4>Năng động</h4>
-<p>Tick những hoạt động bot được dùng để kiếm điểm năng động. Ô <b>Giới hạn năng động</b> là mốc điểm; đủ mốc thì tác vụ coi như xong hôm nay. Hoạt động có dấu * là bot chưa làm được. Giờ giấc của từng hoạt động lấy theo hẹn giờ của tác vụ cùng tên.</p>
+<p>Tick những hoạt động bot được dùng để kiếm điểm năng động. Ô <b>Giới hạn năng động</b> là mốc điểm; đủ mốc thì tác vụ coi như xong hôm nay. Hoạt động có dấu * là bot chưa làm được (Hiệp Phong). Giờ giấc của từng hoạt động lấy theo hẹn giờ của tác vụ cùng tên.</p>
+<p><b>Phong Lăng Độ</b> (mặc định không tick): một chuyến mỗi ngày; thuyền chạy (được +5 điểm) thì bot thoát game rồi vào lại (cần tài khoản ở tab Tài khoản, không có thì ở lại tới bờ), về Tây Sơn Thôn rồi về thành lưu rương lại. Tick thêm tác vụ Phong Lăng Độ thì đi trọn mọi chuyến; Chiến lệnh còn thiếu chuyến trọn hôm nay thì cũng ở lại tới bờ.</p>
 <p class="tip">Ví dụ: tick Môn phái, Hằng ngày, Mặc Thạch, giới hạn 25: bot làm ba nhiệm vụ cho tới khi được 25 điểm rồi chuyển sang việc khác trong danh sách.</p>
 </div></div>
 <div class="sec">
@@ -263,15 +272,37 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h4>Tống Kim (BD)</h4>
 <p><b>Bên báo danh</b>: Tống, Kim, hoặc Ngẫu nhiên. Ngẫu nhiên nghĩa là báo danh ở quan gần hơn; máy chủ sẽ chia phe theo quân số, và nếu nhân vật đã được xếp phe trong lượt này thì bot tự tới đúng quan phe đó (đi Xa Phu nếu ở khu bên kia). Có hẹn giờ và lệch như các tác vụ khác.</p>
 </div></div>
+<div class="sec wide"><div>
+<h4>Đào kho báu, Phong Lăng Độ</h4>
+<p>Hộp Hẹn giờ, thêm vài ô ở trên.</p>
+<div class="ctl">
+<b>Số lần trong ngày</b><span>Đào kho báu: số tấm Tàng Bảo Đồ đào mỗi ngày (game cho tối đa 50).</span>
+<b>Số tiền giữ lại (vạn)</b><span>Đào kho báu: tiền (túi + rương) giữ lại cho việc khác. Mỗi tấm giám định tốn 2 vạn; bot chỉ đào số tấm mà tiền trên mức này đủ trả.</span>
+<b>Bến thuyền</b><span>Phong Lăng Độ: Bến 1 (Thuyền Phu Giáp) và Bến 2 (Ất) có boss Thủy Tặc; Bến 3 (Bính) không có boss. Ngẫu nhiên: mỗi nhân vật luôn đi một bến theo tên. Thuyền đầy hoặc bị từ chối thì sang bến kế.</span>
+</div>
+<p class="tip">Thuyền chỉ cho lên từ HH:00 tới HH:10. Muốn tới bến sớm rồi đứng chờ cạnh Thuyền Phu thì đặt Lệch âm (ví dụ -10).</p>
+</div></div>
+<div class="sec">
+<figure class="shot"><img src="img/hop-chienlenh.png" alt="Hộp Chiến lệnh: các nhiệm vụ ngày bot làm, nhận thưởng" width="316" height="215"><figcaption>Chiến lệnh.</figcaption></figure>
+<div>
+<h4>Chiến lệnh</h4>
+<p>Chọn các nhiệm vụ ngày của Chiến Lệnh mà bot làm bằng tác vụ sẵn có (mặc định tick cả bốn ô). Không có hẹn giờ riêng: mỗi việc theo hẹn giờ của dòng cùng tên. Ngoài mùa Chiến Lệnh: không làm gì.</p>
+<div class="ctl">
+<b>Tống Kim: đủ 3 trận mỗi ngày</b><span>Báo danh, vào trận rồi ra ở cả 3 trận (13:30, 20:00, 22:15), kể cả khi không tick Tống Kim (BD).</span>
+<b>Phong Lăng Độ: 1 chuyến trọn mỗi ngày</b><span>Lên thuyền và đánh tới khi cập bờ, không thoát game giữa chuyến. Dùng Bến thuyền của dòng Phong Lăng Độ; chết dọc đường thì chuyến sau đi lại.</span>
+<b>NV Mặc Thạch: 10 mỗi ngày, thứ 2 thêm 30</b><span>Cho nhiệm vụ ngày "Hôm nay hoàn thành 10 NV Mặc Thạch" và mốc tuần 75 / 100: thứ 2 làm 40, các ngày sau 10, ngày lỡ thì làm bù; luôn giữ 1 nhiệm vụ cho mỗi ngày còn lại của tuần. Thay ô "Chỉ làm khi số nhiệm vụ còn lại" của NV Mặc Thạch.</span>
+<b>Nhận thưởng Chiến lệnh</b><span>Nhận điểm nhiệm vụ đã xong và quà theo cấp. Cùng một ô với "N.thưởng Chiến lệnh" ở trang Thưởng, tiện ích.</span>
+</div>
+<p class="tip">Các việc này chạy ở vị trí dòng Chiến lệnh trong danh sách tác vụ (hoặc ở dòng riêng của chúng nếu dòng đó cao hơn); Tống Kim và thuyền đến giờ thì chen trước NV Mặc Thạch của Chiến lệnh.</p>
+</div></div>
 <div class="sec">
 <figure class="shot"><img src="img/hop-hangngay.png" alt="Hộp NV Hằng ngày: bản đồ nhiệm vụ, mua trang bị, lấy trang bị từ, bản đồ dạo shop" width="536" height="319"><figcaption>NV Hằng ngày.</figcaption></figure>
 <div>
 <h4>NV Hằng ngày</h4>
 <div class="ctl">
 <b>Bản đồ nhiệm vụ</b><span>Thành nhận nhiệm vụ.</span>
-<b>Mua trang bị</b><span>Nhiệm vụ đòi nộp trang bị mà trong túi không có thì mua. "Giá hợp lý": mua ở NPC không quá <b>Giá mua từ NPC</b>, ở sạp người chơi không quá <b>Giá mua tối đa</b>.</span>
-<b>Lấy trang bị từ</b><span>Trước khi mua, tìm món cần nộp ở túi hành trang và các rương được tick.</span>
-<b>Bản đồ dạo shop</b><span>Các thành bot đi dạo sạp người chơi để tìm món thiếu, theo thứ tự (▲ ▼). <b>Dạo shop sau mỗi (phút)</b>: cách bao lâu mới dạo lại.</span>
+<b>Lấy trang bị từ</b><span>Nhiệm vụ đòi nộp trang bị: tìm món đó ở túi hành trang và các rương được tick (Rương 1-3 là rương mua thêm: nhân vật nào có mới dùng được).</span>
+<b>Mua trang bị, Bản đồ dạo shop</b><span>Hộp ghi "mua: sắp có": NV Hằng ngày chưa mua trang bị, các ô mua và dạo shop ở hộp này chưa có tác dụng (NV Mặc Thạch thì có, xem dưới).</span>
 </div>
 <p class="tip">Khi chưa có món đúng yêu cầu, bot đi luyện công và nhặt đồ; nhặt được món phù hợp thì giữ lại (không rã, không bán) để đem nộp.</p>
 </div></div>
@@ -279,11 +310,13 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <figure class="shot"><img src="img/hop-macthach.png" alt="Hộp NV Mặc Thạch: thêm Chọn phần thưởng, Rèn trang bị, Chỉ làm khi số nhiệm vụ còn lại" width="536" height="395"><figcaption>NV Mặc Thạch.</figcaption></figure>
 <div>
 <h4>NV Mặc Thạch</h4>
-<p>Giống NV Hằng ngày, thêm:</p>
+<p>Giống NV Hằng ngày (Bản đồ nhiệm vụ là thành gặp Mặc Thạch), thêm:</p>
 <div class="ctl">
+<b>Mua trang bị</b><span>Không có món cần nộp ở túi / rương đã tick thì mua ở NPC (không quá <b>Giá mua từ NPC</b>); tick ô này thì còn mua ở sạp người chơi (không quá <b>Giá mua tối đa</b>). "Giá hợp lý": mua ở sạp đầu tiên có món; "Giá rẻ nhất": dạo hết rồi mua chỗ rẻ nhất.</span>
+<b>Bản đồ dạo shop</b><span>Các thành bot đi dạo sạp người chơi để tìm món thiếu, theo thứ tự (▲ ▼). <b>Dạo shop sau mỗi (phút)</b>: cách bao lâu mới dạo lại.</span>
 <b>Chọn phần thưởng</b><span>Phần thưởng chọn khi trả nhiệm vụ, hoặc Chọn ngẫu nhiên.</span>
 <b>Rèn t. bị / Rèn t. bị khóa</b><span>Không có món cần nộp thì rèn (xem Rèn ở trang Chia sẻ, gom, giao, rèn) trước khi đi sạp: sau NPC, trước sạp. Rèn ra món không đòi thuộc tính.</span>
-<b>Chỉ làm khi số nhiệm vụ còn lại &gt;</b><span>Còn ít hơn số này trong chuỗi 25 nhiệm vụ thì không làm nữa, để dành.</span>
+<b>Chỉ làm khi số nhiệm vụ còn lại &gt;</b><span>Tuần có 100 NV Mặc Thạch (đếm lại từ thứ Hai): số còn lại phải lớn hơn số này mới làm tiếp, để dành cho các ngày sau. Hôm nay chưa làm thì vẫn làm 1 (được 10 điểm năng động); Chủ nhật làm hết. Khi tác vụ Chiến lệnh được tick (trong mùa) và có tick ô NV Mặc Thạch của nó thì lịch của Chiến lệnh thay ô này.</span>
 </div>
 <div class="box warn"><b>Không bao giờ bấm "Hủy Nh.vụ" của Mặc Thạch trong game.</b> Hủy là mất cả chuỗi 25 nhiệm vụ, tức mất một vé Mặc Thạch. Bot cũng không bao giờ hủy.</div>
 </div></div>
@@ -293,12 +326,17 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h4>Luyện công Tân thủ</h4>
 <p>Để một nhân vật vừa tạo tự lớn mà không cần đặt lộ trình hay kỹ năng.</p>
 <div class="ctl">
-<b>Môn phái</b><span>Chọn môn phái và nhánh để bot cộng điểm kỹ năng đúng nhánh (hết cấp 10 của nhánh thì dừng).</span>
+<b>Môn phái</b><span>Chọn một dòng "môn phái - nhánh". Bắt buộc: chưa chọn thì tác vụ không chạy. Nhân vật vào môn phái này ở cấp 10 (môn phái phải hợp hệ và giới tính của nhân vật); nhánh quyết định kỹ năng bot dùng để đánh.</span>
+<b>Tự cộng điểm kỹ năng</b><span>Dồn hết điểm kỹ năng vào kỹ năng cấp 10 của nhánh.</span>
 <b>Tự cộng điểm tiềm năng</b><span>Chia theo tỉ lệ bốn ô Sức mạnh, Thân pháp, Sinh khí, Nội công. Ví dụ 0 0 2 3: cứ 5 điểm thì 2 vào Sinh khí, 3 vào Nội công.</span>
 <b>Tự mặc đồ theo ngũ hành</b><span>Nhặt được đồ tốt hơn thì mặc ngay, món cũ đem rã hoặc để Lọc xử lý.</span>
-<b>Ăn Tiên Thảo Lộ, Năng động 25 điểm, Lập đội</b><span>Ba việc mỗi ngày của nhân vật mới; Năng động làm Hằng ngày, Mặc Thạch, Môn phái. Lập đội và mời người quanh mình khi trang Tổ đội để trống.</span>
+<b>Ăn Tiên Thảo Lộ, Năng động 25 điểm</b><span>Mỗi ngày ăn 1 bình Tiên Thảo Lộ-Cực (Tiên Thảo Lộ thường để sau cấp 60). Xong chuỗi tân thủ thì mỗi ngày làm Hằng ngày, Mặc Thạch, Môn phái cho đủ 25 điểm năng động (trừ khi bạn tự tick tác vụ Năng động).</span>
+<b>Lập đội</b><span>Trang Tổ đội để trống thì tự lập đội, mời mọi người quanh mình và nhận người xin vào. Dù không tick ô này: các nhân vật trong bot đang làm chuỗi tân thủ trên cùng bản đồ tự vào chung một đội; lúc luyện công mà đang ở đội có đội trưởng là nhân vật trong bot thì đi theo sau đội trưởng đó.</span>
+<b>Phạm vi đánh (px)</b><span>Đánh quái trong phạm vi này tính từ các điểm của bãi. Bãi không có điểm (luyện cả bản đồ): không giới hạn.</span>
 <b>Tiền giữ trong túi, rút, Ngọc Lộ Hoàn</b><span>Giữ bao nhiêu tiền trong túi (thừa gửi rương), rút bao nhiêu để mua, mua bao nhiêu Ngọc Lộ Hoàn (Tiểu) khi hết và ngưỡng mua bình máu / nội lực khi thiếu tiền.</span>
 </div>
+<p class="tip">Bãi bot tự chọn theo cấp: dưới 15 bãi của thôn gần nhất; 15-19 bãi quái gần thành / thôn, chọn nơi đi tới rẻ nhất; 20-24 Hoa Sơn; 25-29 Cái Bang; 30-39 Tần Lăng; 40-49 Tây Phục Ngưu Sơn hoặc Hoàng Hà Nguyên Đầu; 50-59 Lưu Tiên Động, không tới được thì Thiên Tâm Động (hệ Hỏa: Thiên Tâm Động trước).</p>
+<p class="tip">Trong lúc chạy, bot tự bật cho nhân vật này (không ghi vào thiết lập): Tự đọc thư, N. thưởng năng động, Điểm danh ngày, N.thưởng Chiến lệnh, tác vụ Nhận thưởng Thẻ tháng, sửa trang bị khi về thành, nhặt tiền; về thành bằng Thổ địa phù khi máu dưới 30% (mốc của bạn trong khoảng 30-40% thì giữ nguyên).</p>
 </div></div>
 
 <h3 id="truongca">Trường Ca (chiến đội)</h3>
@@ -475,9 +513,9 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <h3 id="todoi">Trang con: Tổ đội, theo sau</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-todoi.png" alt="Trang Tổ đội, theo sau" width="320" height="817"><figcaption>Tác vụ › Tổ đội, theo sau.</figcaption></figure>
+<figure class="shot"><img src="img/sub-todoi.png" alt="Trang Tổ đội, theo sau" width="320" height="825"><figcaption>Tác vụ › Tổ đội, theo sau.</figcaption></figure>
 <div>
-<p>Đặt ai vào đội ai, ai đi theo ai. Hai danh sách tên: gõ tên hoặc chọn từ hộp thả xuống (hộp liệt kê người đang ở quanh), bấm <b>+</b> để thêm. Nút <b>⋯</b> lưu danh sách ra tệp để nhân vật khác nạp lại.</p>
+<p>Đặt ai vào đội ai, ai đi theo ai. Hai danh sách tên: gõ tên hoặc chọn từ hộp thả xuống (hộp liệt kê nhân vật trong bot và người đang ở quanh), bấm <b>+</b> để thêm vào sau dòng đang chọn; <b>✕</b> xoá, <b>▲ ▼</b> đổi thứ tự. Bỏ tick một tên là tạm bỏ qua người đó, tên vẫn giữ trong danh sách. Nút <b>⋯</b> lưu danh sách ra tệp để nhân vật khác nạp lại, nạp từ tệp hoặc xoá hết.</p>
 <h4>Khung Tổ đội</h4>
 <p>Danh sách là <b>thứ tự ưu tiên</b>: người ở trên là đội trưởng được ưu tiên. Chỉ ai có tên ở đây mới được mời hoặc nhận vào đội.</p>
 <div class="ctl">
@@ -487,29 +525,29 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 </div>
 <h4>Khung Theo sau</h4>
 <div class="ctl">
-<b>Danh sách</b><span>Theo người đầu tiên trong danh sách đang có mặt. Thứ tự tính từ trên xuống tới tên mình; đứng đầu danh sách nghĩa là không theo ai.</span>
+<b>Danh sách</b><span>Theo người đầu tiên trong danh sách đang có mặt. Thứ tự tính từ trên xuống tới tên mình; đứng đầu danh sách nghĩa là không theo ai. Tick Luyện công: chỉ theo người cùng bản đồ trong tầm nhìn; khuất thì chỉ theo khi người đó là nhân vật trong bot cũng đang luyện công; người ở bản đồ khác thì ở lại bãi. Auto PK hoặc chỉ theo sau (không tick Luyện công): theo cả sang bản đồ khác, tới chỗ bot biết nhân vật trong bot đang đứng.</span>
 <b>Theo đ. trưởng</b><span>Ưu tiên đi theo đội trưởng của tổ đội trước, rồi mới tới danh sách.</span>
 <b>PK: d. sách trước</b><span>Khi Auto PK thì theo danh sách trước, đội trưởng sau (luyện công vẫn theo đội trưởng trước).</span>
 <b>Lên ngựa &gt;</b><span>Mọi quãng đi xa hơn số này (đi lộ trình, về bãi, theo sau, tới tiệm) thì lên ngựa trước. 900 là vừa.</span>
 <b>Giữ k.cách L.công / PK</b><span>Không đứng gần hơn số đầu, không để xa hơn số sau so với người được theo. Ô bên cạnh chọn <b>đứng phía nào</b> của người đó (Trước, Sau, Trái, Phải…) để nhiều nhân vật theo sau không dồn một chỗ bị đánh chùm; "Trước" là hướng người đó đang đánh. Tự do: chỉ giữ khoảng cách.</span>
 <b>Lướt khi đi xa</b><span>Thiên Vương: dùng Đoạn Hồn Thích để lướt khi đi xa ngoài thành. Phái khác ô bị khóa.</span>
 </div>
-<div class="box"><b>"Đội trưởng" trong mọi thiết lập</b> nghĩa là: trong tổ đội thì là đội trưởng của đội; không có tổ đội thì là người mình đang theo sau. Nhân vật đang làm nhiệm vụ (Môn phái, Hằng ngày, Mặc Thạch) không theo sau ai và không được tính là đội trưởng để theo.</div>
+<div class="box"><b>"Đội trưởng" trong mọi thiết lập</b> nghĩa là: trong tổ đội thì là đội trưởng của đội; không có tổ đội thì là người mình đang theo sau. Nhân vật đang làm nhiệm vụ (Môn phái, Hằng ngày, Mặc Thạch) không theo sau ai và không được tính là đội trưởng để theo. Nhân vật đang Luyện công Tân thủ ở trong đội mà đội trưởng là nhân vật trong bot thì tự theo sau đội trưởng đó (như tick Tự theo sau và Theo đ. trưởng), không cần đặt gì ở trang này.</div>
 </div></div>
 
 <h3 id="thuong">Trang con: Thưởng, tiện ích</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-thuong.png" alt="Trang Thưởng, tiện ích" width="320" height="817"><figcaption>Tác vụ › Thưởng, tiện ích.</figcaption></figure>
+<figure class="shot"><img src="img/sub-thuong.png" alt="Trang Thưởng, tiện ích" width="320" height="825"><figcaption>Tác vụ › Thưởng, tiện ích.</figcaption></figure>
 <div>
 <p>Các việc nhỏ bot làm xen kẽ, không cần xếp thứ tự.</p>
 <div class="ctl">
 <b>N. thưởng năng động</b><span>Nhận thưởng ở các mốc 10 / 25 / 55 / 80 điểm năng động.</span>
 <b>Điểm danh ngày</b><span>Điểm danh mỗi ngày và nhận kinh nghiệm ngoại tuyến.</span>
-<b>N.thưởng Chiến lệnh</b><span>Nhận các mốc cấp chiến đã đạt (hàng miễn phí) và nhiệm vụ ngày / tuần đã xong.</span>
-<b>Nhận thưởng CTC</b><span>Sau Công Thành Chiến, nhân vật đã vào trận hôm nay thì tới Sứ Giả Thành Chiến đúng phe nhận Túi Càn Khôn. Game nói chưa có thưởng thì 10 phút sau thử lại, tối đa 4 lần.</span>
+<b>N.thưởng Chiến lệnh</b><span>Nhận các mốc cấp chiến đã đạt (hàng miễn phí) và nhiệm vụ ngày / tuần đã xong. Cùng một ô với "Nhận thưởng Chiến lệnh" trong hộp của tác vụ Chiến lệnh. Ngoài mùa Chiến Lệnh thì bỏ qua.</span>
+<b>Nhận thưởng CTC</b><span>Sau Công Thành Chiến, nhân vật đã vào trận hôm nay thì tới Sứ Giả Thành Chiến đúng phe nhận Túi Càn Khôn. Game nói chưa có thưởng thì 10 phút sau thử lại, tối đa 4 lần. Chạy cả khi bật Auto PK.</span>
 <b>Ghép r. Thiên Công</b><span>Đủ 5 Thiên Công Lệnh thì khi gặp Lễ Quan (lúc nhận thẻ tháng hoặc về thành) ghép thành rương. Không tự đi riêng tới Lễ Quan.</span>
 <b>Kích hoạt danh hiệu</b><span>Game hay tự bỏ danh hiệu khi đổi bản đồ. Bật ô này rồi chọn danh hiệu một lần trong game; bot nhớ và kích hoạt lại mỗi khi vào game hay sang bản đồ mới.</span>
-<b>Tự đọc thư</b><span>Có thư mới và đang ở khu an toàn: mở hộp thư, đọc, nhận đồ đính kèm. Không chen ngang việc đang làm.</span>
+<b>Tự đọc thư</b><span>Có thư mới, hoặc thư đã đọc mà chưa nhận đồ đính kèm, và đang ở khu an toàn: mở hộp thư từ xa, đọc, nhận đồ đính kèm; nhận từ xa không được thì tới Tín Sứ ở thành gần nhất. Không chen ngang việc đang làm.</span>
 <b>Hiển thị S.L thuốc</b><span>Hiện số lượng thuốc (chưa làm trong bản này).</span>
 <b>Quyên góp bang hội</b><span>Ở khu an toàn, túi có từ số ô thứ hai (vạn lượng) trở lên thì góp vào quỹ bang phần vượt số ô thứ nhất. Chạy trước "Gửi tiền" của Hậu cần. Ba lần không góp được thì thôi hôm nay.</span>
 </div>
@@ -519,11 +557,11 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h2 id="luyencong">Tab L. công</h2>
 <p class="lead">Đánh quái ở đâu, đánh thế nào, và khi nào thì về thành.</p>
 <div class="sec">
-<figure class="shot"><img src="img/tab-luyencong.png" alt="Tab L. công: luyện công, lộ trình, quây quái, về thành khi" width="320" height="817"><figcaption>Tab L. công.</figcaption></figure>
+<figure class="shot"><img src="img/tab-luyencong.png" alt="Tab L. công: luyện công, lộ trình, quây quái, về thành khi" width="320" height="825"><figcaption>Tab L. công.</figcaption></figure>
 <div>
 <h4>Khung Luyện công</h4>
 <div class="ctl">
-<b>Tự đánh + số</b><span>Đánh quái trong phạm vi này tính từ lộ trình. Bỏ tick: chỉ đi theo toạ độ hoặc theo sau, không đánh. 400 là tầm bình thường.</span>
+<b>Tự đánh + số</b><span>Đánh quái trong phạm vi này tính từ lộ trình. Kiểu Tự do (cả bản đồ): không giới hạn, đánh mọi quái thấy quanh nhân vật (số này chỉ dùng cho lộ trình). Bỏ tick: chỉ đi theo toạ độ hoặc theo sau, không đánh. 400 là tầm bình thường.</span>
 <b>Đánh lẻ</b><span>Tick: tự đánh một mình theo lộ trình. Bỏ tick: đi theo lộ trình để tìm đội trưởng / người theo sau, vào được đội rồi mới đánh (xem trang Tổ đội).</span>
 <b>Từ tâm</b><span>Đi tới tâm từng điểm lộ trình, dọc đường không đánh (trừ khi bị quái chặn quá 2 giây), tới nơi đánh hết quái quanh điểm rồi sang điểm kế. Hợp bãi có quái tụ thành cụm.</span>
 <b>Kiểu</b><span><b>Theo tọa độ</b>: đánh quanh các điểm lộ trình bên dưới. <b>Tự do (cả bản đồ)</b>: không cần lộ trình, đánh quái quanh mình, hết quái thì lên ngựa chạy chỗ khác trong bản đồ, tránh cổng. Ô bên cạnh là bản đồ luyện công tự do: gõ để tìm; chọn Tự do khi đang đứng ở bãi thì tự lấy bản đồ hiện tại.</span>
@@ -532,7 +570,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <p>Ba ô trên danh sách là bản đồ, x, y. Chúng tự đổi theo chỗ nhân vật đang đứng; gõ vào để nhập tay. Bấm <b>+</b> để thêm điểm sau điểm đang chọn. Cách làm lộ trình nhanh nhất: dắt nhân vật đi qua bãi, mỗi chỗ muốn dừng bấm <b>+</b> một lần.</p>
 <div class="ctl">
 <b>✕ ▲ ▼ ∅</b><span>Xoá điểm chọn, dời lên / xuống, xoá hết (để làm lộ trình bản đồ mới).</span>
-<b>Tệp, Nạp, Lưu</b><span>Lộ trình đang dùng lấy từ tệp nào. <b>Nạp</b>: chọn tệp và nạp luôn cho các nhân vật đang chọn (dùng chung một lộ trình cho cả nhóm). <b>Lưu</b>: ghi ra tệp; chữ Lưu đỏ nghĩa là đã sửa mà chưa ghi.</span>
+<b>Tệp, Nạp, Lưu</b><span>Lộ trình đang dùng lấy từ tệp nào. Ô này chỉ hiện tên tệp; đưa chuột lên để xem đường dẫn đầy đủ. <b>Nạp</b>: chọn tệp và nạp luôn cho các nhân vật đang chọn (dùng chung một lộ trình cho cả nhóm). <b>Lưu</b>: luôn hỏi tên tệp (gợi sẵn tệp đang dùng) rồi mới ghi; chữ Lưu đỏ nghĩa là đã sửa mà chưa ghi.</span>
 </div>
 <h4>Quây quái</h4>
 <div class="ctl">
@@ -545,7 +583,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <b>Đầy h. trang + cỡ</b><span>Không còn chỗ trống cho món cỡ này (ngang × dọc ô). 2x1 là chặt nhất.</span>
 <b>Độ bền &lt;=</b><span>Một món đang mặc còn độ bền bằng hoặc dưới mức này.</span>
 <b>Tiền &gt;=</b><span>Ngân lượng mang theo lên tới mức này thì về gửi rương, tránh chết mất tiền.</span>
-<b>Hết bình máu / mana / Ngọc Lộ Hoàn</b><span>Hết loại đó trong túi và thanh phím tắt. Ngọc Lộ Hoàn chỉ tính loại có trong danh sách Mua thuốc.</span>
+<b>Hết bình máu / mana / Ngọc Lộ Hoàn</b><span>Hết loại đó trong túi và thanh phím tắt. Ngọc Lộ Hoàn chỉ tính những loại có trong danh sách Mua thuốc / Mua tạp hóa, đếm trong túi đạo cụ. Hai danh sách không có loại nào thì phải hết mọi loại mới về.</span>
 </div>
 </div></div>
 
@@ -553,20 +591,20 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h2 id="tuve">Tab Tự vệ/PK</h2>
 <p class="lead">Gặp người đánh mình thì làm gì, cừu sát và đồ sát ai, vài ô cho lúc PK.</p>
 <div class="sec">
-<figure class="shot"><img src="img/tab-tuve.png" alt="Tab Tự vệ/PK" width="320" height="817"><figcaption>Tab Tự vệ/PK.</figcaption></figure>
+<figure class="shot"><img src="img/tab-tuve.png" alt="Tab Tự vệ/PK" width="320" height="825"><figcaption>Tab Tự vệ/PK.</figcaption></figure>
 <div>
 <h4>Khung Tự vệ</h4>
 <p>Đang luyện công mà có người chơi là kẻ địch (khác màu, hoặc đang cừu sát mình) đi vào phạm vi ô số thứ nhất, dù chưa đánh mình, thì làm theo kiểu đã chọn.</p>
 <div class="ctl">
-<b>Kiểu tự vệ</b><span><b>Thổ địa phù</b>: về thành ngay. <b>Chuyển phe</b>: mình là đội trưởng, địch đủ đông (xem Phục hồi › Chỉ chuyển phe khi số lượng), giao chức đội trưởng cho thành viên cùng màu với địch. <b>Đánh trả</b>: đánh kẻ địch gần nhất trong phạm vi ô số thứ hai tính từ lộ trình; nó chạy xa hơn thì quay lại luyện công. <b>Bỏ chạy</b>: chạy tới chỗ trống cách mọi địch đủ xa, tránh tường và ngõ cụt; bị vây không còn đường thì phù về thành ngay (không có phù thì đánh trả); hết địch thì luyện tiếp.</span>
-<b>Hai số</b><span>Số đầu: phạm vi phát hiện kẻ địch (nên nhỏ hơn tầm kỹ năng). Số sau: chỉ đánh / đuổi địch trong phạm vi này tính từ lộ trình luyện công, ra ngoài thì buông và về lộ trình.</span>
+<b>Kiểu tự vệ</b><span><b>Thổ địa phù</b>: về thành ngay; ở nơi không dùng được phù (như trên thuyền Phong Lăng Độ) thì bỏ chạy, bị vây thì đánh trả. <b>Chuyển phe</b>: mình là đội trưởng, địch đủ đông (xem Phục hồi › Chỉ chuyển phe khi số lượng), giao chức đội trưởng cho thành viên cùng màu với địch. <b>Đánh trả</b>: đánh kẻ địch gần nhất trong phạm vi ô số thứ hai tính từ lộ trình; nó chạy xa hơn thì quay lại luyện công. <b>Bỏ chạy</b>: chạy tới chỗ trống cách mọi địch đủ xa, tránh tường và ngõ cụt; bị vây không còn đường thì phù về thành ngay (không có phù thì đánh trả); hết địch thì luyện tiếp.</span>
+<b>Hai số</b><span>Số đầu: phạm vi phát hiện kẻ địch (nên nhỏ hơn tầm kỹ năng). Số sau: chỉ đánh / đuổi địch trong phạm vi này tính từ lộ trình luyện công (kiểu Tự do: từ chỗ gặp địch) và từ chỗ bắt đầu đuổi, ra ngoài thì buông và về lộ trình.</span>
 <b>chỉ với</b><span>Kiểu tự vệ trên chỉ áp dụng với kẻ địch thuộc loại này: <b>Tất cả</b>, hoặc <b>Môn phái / Hệ / Người chơi</b> có trong danh sách ở nút "…" (trống nghĩa là mọi người). Ô cuối: với địch <b>không</b> khớp danh sách thì làm kiểu nào khác, hoặc Không làm gì. Mỗi kiểu tự vệ nhớ loại và danh sách riêng.</span>
 <b>Đánh không nổi: chạy, máu &lt;</b><span>Chọn Đánh trả mà máu tụt dưới số này (%), hoặc hết bình máu, thì bỏ chạy như kiểu Bỏ chạy (đi bộ thì kèm Khinh công ngược hướng địch). Máu hồi lên và còn bình thì đánh trả lại. Máu xuống dưới ngưỡng TĐP ở trang Phục hồi thì vẫn phù về thành như cũ.</span>
 </div>
 <p class="tip">Người có tên trong danh sách Tự cừu sát luôn được đánh trả, dù "chỉ với" chọn cách khác.</p>
 <h4>Khung Cừu sát / đồ sát</h4>
 <div class="ctl">
-<b>Tự cừu sát</b><span>Ở khu chiến đấu, thấy người có tên trong danh sách "…" thì cừu sát người đó rồi đánh như kẻ địch. Không được thì 30 giây sau thử lại.</span>
+<b>Tự cừu sát</b><span>Đang luyện công ở khu chiến đấu (không tính bản đồ sự kiện), thấy người có tên trong danh sách "…" thì cừu sát người đó (người gần nhất trước) rồi đánh như kẻ địch. Game không nhận thì 2 giây sau thử lại.</span>
 <b>Bảo vệ cừu sát</b><span>Nhân vật trong danh sách (nhân vật khác của bot) đang bị ai đó cừu sát thì mình cừu sát người đó luôn, để cả nhóm cùng đánh. Các nhân vật ghi tên nhau thì bảo vệ qua lại.</span>
 <b>TĐP khi cừu sát + số</b><span>Bị người khác cừu sát mà điểm PK của mình từ số này trở lên thì phù về thành. 0 là luôn về.</span>
 <b>Báo cừu sát</b><span>Vào thế cừu sát thì bot ghi một dòng "Cừu sát với <tên>" ở kênh chat Khác để bạn thấy.</span>
@@ -585,10 +623,10 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <h3 id="phuchoi">Trang con: Phục hồi, nghỉ, chuyển phe</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-phuchoi.png" alt="Trang Phục hồi, nghỉ, chuyển phe" width="320" height="817"><figcaption>Tự vệ/PK › Phục hồi, nghỉ, chuyển phe.</figcaption></figure>
+<figure class="shot"><img src="img/sub-phuchoi.png" alt="Trang Phục hồi, nghỉ, chuyển phe" width="320" height="825"><figcaption>Tự vệ/PK › Phục hồi, nghỉ, chuyển phe.</figcaption></figure>
 <div>
 <h4>Khung Phục hồi</h4>
-<p>Mỗi dòng là một điều kiện uống thuốc. Ba cột <b>Lv1 / Lv2 / Lv3</b> là ba mức: máu tụt dưới mức nào thì uống bình của mức đó. Lv1 dùng loại bình hồi ít nhất trong túi, Lv3 dùng loại hồi nhiều nhất. Ghi 0 là tắt mức đó. Cột <b>ms</b>: cách tối thiểu giữa hai lần uống của dòng đó (mili giây).</p>
+<p>Mỗi dòng là một điều kiện uống thuốc. Ba cột <b>Lv1 / Lv2 / Lv3</b> là ba mức: máu tụt dưới mức nào thì uống bình của mức đó. Lv1 dùng loại bình hồi ít nhất trong túi, Lv3 dùng loại hồi nhiều nhất. Riêng bình máu: bỏ tick "Tự nhồi khi sống &lt;" thì Lv1 cũng dùng bình to nhất (có tick thì bình to để dành cho lúc nhồi). Ghi 0 là tắt mức đó. Cột <b>ms</b>: cách tối thiểu giữa hai lần uống của dòng đó (mili giây).</p>
 <div class="ctl">
 <b>HP, HP %</b><span>Số máu hoặc phần trăm máu dưới mức thì uống bình máu. Thường chỉ cần HP %.</span>
 <b>MP %</b><span>Phần trăm nội lực dưới mức thì uống bình nội lực.</span>
@@ -611,7 +649,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h2 id="haucan">Tab Hậu cần</h2>
 <p class="lead">Mỗi lần về thành bot làm một lượt "hậu cần": mua thuốc, bán, cất đồ, sửa đồ, gửi tiền. Tab này đặt lượt đó làm gì.</p>
 <div class="sec">
-<figure class="shot"><img src="img/tab-haucan.png" alt="Tab Hậu cần: Vật phẩm, Hành trang" width="320" height="817"><figcaption>Tab Hậu cần.</figcaption></figure>
+<figure class="shot"><img src="img/tab-haucan.png" alt="Tab Hậu cần: Vật phẩm, Hành trang" width="320" height="825"><figcaption>Tab Hậu cần.</figcaption></figure>
 <div>
 <h4>Khung Vật phẩm</h4>
 <p>Sáu danh sách, mỗi danh sách một ô tick (bật) và nút "…" mở cửa sổ riêng để thêm món (xem mục kế tiếp). Số trên nút là số món trong danh sách.</p>
@@ -630,23 +668,24 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <b>Khoá rương + mật khẩu</b><span>Rương có mật khẩu thì ghi vào để bot mở trước khi chuyển đồ, xong khoá lại.</span>
 <b>Rút tiền + số</b><span>Lượt hậu cần có món cần mua thì rút từ rương cho túi có sẵn số này. Đang mua / sửa mà thiếu thì rút bù dù có tick hay không.</span>
 <b>Gửi tiền + số</b><span>Lúc rảnh ở khu an toàn, túi giữ đúng số này: thừa gửi rương, thiếu rút ra. Chết ngoài bãi không mất tiền trong rương, nên nên bật.</span>
-<b>Mở túi thuốc</b><span>Còn ít bình thì mở túi thuốc (Cẩm Nang Xích Hà Đơn…) lấy bình ra. Nút "…" đặt luật: mở khi nào, kích hoạt ở số bình nào, lấy ít nhất bao nhiêu, giữ lại bao nhiêu ô trống (xem ảnh ở dưới). Có thể mở ngay bằng <kbd>Ctrl</kbd>+<kbd>X</kbd>.</span>
+<b>Mở túi thuốc</b><span>Còn ít bình thì mở túi thuốc (Cẩm Nang Xích Hà Đơn…) lấy bình ra. Nút "…" đặt luật: mở khi nào, kích hoạt ở số bình nào, lấy ít nhất bao nhiêu, giữ lại bao nhiêu ô trống (xem ảnh ở dưới). Có thể mở ngay bằng <kbd>Ctrl</kbd>+<kbd>X</kbd> (không chờ). Tự mở ở khu chiến đấu thì bot chờ tới khi trong khoảng 700 quanh mình không còn quái và người chơi địch, vì bị đánh là mở hỏng.</span>
 <b>Khóa trang bị</b><span>Trang bị đang mặc không bị vứt, không bị rã, cả khi bạn tháo ra bỏ vào túi trong lúc bot chạy. Nên bật.</span>
-<b>Sắp xếp hành trang</b><span>Dồn ô trống trong túi đạo cụ thành khối 2–3 ô liền nhau khi game báo thiếu chỗ (nhận thưởng, giao nộp cần chỗ như vậy). Không chạy khi Auto PK.</span>
+<b>Sắp xếp hành trang</b><span>Dồn ô trống trong túi đạo cụ thành khối 2–3 ô liền nhau khi game báo thiếu chỗ (nhận thưởng, giao nộp cần chỗ như vậy). Lúc luyện công trên bãi cũng tự xếp xen giữa các đòn, khi túi đổi mà khối ô trống liền nhau còn dưới 8 ô (phù về thành thì dừng). Ở thành chỉ xếp khi game báo thiếu chỗ. Không chạy khi Auto PK.</span>
 <b>Sửa HK + kiểu</b><span>Sửa cả đồ Hoàng Kim / Bạch Kim khi sửa đồ. <b>Sơ</b>: rẻ nhưng giảm độ bền tối đa. <b>Kỹ</b>: gấp 3 tiền, giữ nguyên độ bền tối đa. <b>+ TT</b>: dùng thêm Thủy Tinh để bù độ bền tối đa đã mất. Không tick: bot để yên đồ HK.</span>
 <b>Thay đổi t. bị</b><span>Mặc bộ PvP khi Auto PK / Liên đấu, bộ Luyện công khi làm việc khác, theo hai danh sách ở nút "…" (ảnh ở dưới). Món trong hai danh sách không bao giờ bị bán, rã, cất, hủy hay giao đi.</span>
 <b>Ghép P.D</b><span>Ở khu an toàn: 10 Phúc Duyên Lộ (Tiểu) ghép thành 1 (Trung); chọn Trung thì ghép thêm 5 Trung thành 1 Đại.</span>
 <b>Ghép sổ tay rèn</b><span>Có từ 2000 Mảnh Trang Bị thì đổi lấy Sổ Tay Rèn. Tick cả Rèn thì việc nào chạy trước lấy mảnh trước.</span>
 <b>Ghép q. t. bí + cấp</b><span>Ghép 6 Quà Thần Bí cùng cấp lên một cấp, từ thấp lên tới cấp đã ghi. Cần Cuộn Sách Luân Hồi Tăng Cấp (thiếu thì mua tạp hoá).</span>
 <b>Ghép h. tinh + cấp</b><span>Trong thành: ghép 3 Khoáng Thạch Huyền Tinh cùng cấp lên một cấp, tới cấp đã ghi. Khoá ghép với khoá, không khoá với không khoá. Thất bại mất một viên.</span>
-<b>Bản đồ thiết lập</b><span>Thôn / thành mà Thổ địa phù đưa về. Lỡ vào thành khác thì bot về đây làm hậu cần.</span>
+<b>Bản đồ thiết lập</b><span>Thôn / trấn / thành mà Thổ địa phù đưa về (phù đưa về rương chạm lần cuối). Lỡ vào thành khác thì bot về đây làm hậu cần và chạm rương ở đây. Để (không): bot tự lấy thành / thôn có rương gần bãi luyện công.</span>
+<b>Rương lưu</b><span>Chỉ bật khi Bản đồ thiết lập là một trong 7 thành: chọn rương bot chạm để lưu điểm Thổ địa phù trước khi ra bãi. Lượt hậu cần ở thành đó cũng đi thẳng tới rương này để cất đồ. <b>Tự do</b>: rương nào cũng được (rương gần chỗ Xa Phu / phù vừa đưa tới). <b>Đông / Tây / Nam / Bắc / Trung Tâm</b>: rương gần điểm cùng tên của Thần Hành Phù (Thành Đô Đông…). Mỗi thành chỉ hiện những hướng nó có: Lâm An không có Tây, Đại Lý chỉ có Bắc và Trung Tâm, Biện Kinh Đông và Nam là một chỗ. Thôn / trấn: ô này tắt, bot dùng rương gần nhất. NV Mặc Thạch vẫn lưu rương gần Mặc Thạch.</span>
 </div>
 <figure class="inline"><img src="img/cs-tuithuoc.png" alt="Cửa sổ Mở túi thuốc" width="450" height="285"><figcaption>Mở túi thuốc: mỗi dòng là Mở khi · Kích hoạt (còn bao nhiêu bình thì mở) · Lấy ít nhất · Ô giữ lại. Chưa có dòng nào thì bot dùng Luôn mở, 10, 10, 20.</figcaption></figure>
 <figure class="inline"><img src="img/cs-trangbi.png" alt="Cửa sổ Thay đổi trang bị với hai bộ PvP và Luyện công" width="806" height="509"><figcaption>Thay đổi trang bị. Mỗi bộ: chọn vị trí ở ô trái, chọn món ở ô phải (liệt kê món đang mặc, trong túi, túi hành trang, rương), bấm +. Load: lấy nguyên bộ đang mặc. Khung Thuộc tính bên phải hiện thuộc tính món đang chọn.</figcaption></figure>
 </div></div>
 
 <h3 id="danhsachvp">Các cửa sổ danh sách (nút "…")</h3>
-<p>Tám danh sách dùng chung một kiểu cửa sổ: bảng ở trên, ô nhập ở dưới. Gõ hoặc chọn tên món ở ô thả xuống (hộp liệt kê món đang có trong túi và tên quen thuộc), điền số, bấm <b>Thêm</b>. Chọn một dòng rồi sửa số và bấm <b>Lưu</b>. Tick ở đầu dòng là dòng đó đang dùng. Cột <b>Hoạt động</b>: món chỉ áp dụng khi đang làm việc đó (Luyện công, Auto PK, Làm nhiệm vụ) hoặc Không giới hạn. Nút <b>⋯</b> lưu / nạp danh sách ra tệp.</p>
+<p>Tám danh sách dùng chung một kiểu cửa sổ: bảng ở trên, ô nhập ở dưới. Gõ hoặc chọn tên món ở ô thả xuống (hộp liệt kê món đang có trong túi và tên quen thuộc), điền số, bấm <b>Thêm</b>. Chọn một dòng rồi sửa số và bấm <b>Lưu</b>. Tick ở đầu dòng là dòng đó đang dùng. Cột <b>Hoạt động</b>: món chỉ áp dụng khi đang làm việc đó (Luyện công, Auto PK, Làm nhiệm vụ, Liên đấu, Phong Lăng Độ, Trường Ca, Cấm Địa Phái…) hoặc Không giới hạn. Nút <b>⋯</b> lưu / nạp danh sách ra tệp.</p>
 <div class="scen">
 <div><h4>Mua thuốc, Mua tạp hóa</h4><figure class="inline"><img src="img/ds-muathuoc.png" alt="Cửa sổ Mua thuốc" width="616" height="398"></figure><p><b>Min / Max</b>: trong túi ít hơn Min thì mua cho đủ Max. Ví dụ Xích Hà Đơn 5 / 10: còn 4 bình thì về thành mua lên 10.</p></div>
 <div><h4>Tự sử dụng</h4><figure class="inline"><img src="img/ds-tusudung.png" alt="Cửa sổ Tự sử dụng" width="616" height="431"></figure><p>Thêm <b>Cấp</b> (khoảng cấp của món) và <b>Khóa</b> (chỉ dùng món khóa / không khóa / cả hai). Một món có thể ghi nhiều dòng với hoạt động khác nhau, như Ngọc Lộ Hoàn (Đại) chỉ khi Auto PK.</p></div>
@@ -658,9 +697,9 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <h3 id="chiase">Trang con: Chia sẻ, gom, giao, rèn</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-chiase.png" alt="Trang Chia sẻ, gom, giao, rèn" width="320" height="817"><figcaption>Hậu cần › Chia sẻ, gom, giao, rèn.</figcaption></figure>
+<figure class="shot"><img src="img/sub-chiase.png" alt="Trang Chia sẻ, gom, giao, rèn" width="320" height="825"><figcaption>Hậu cần › Chia sẻ, gom, giao, rèn.</figcaption></figure>
 <div>
-<p>Việc giữa các nhân vật của cùng một bot (cùng được tick).</p>
+<p>Việc giữa các nhân vật của cùng một bot (cùng được tick, cùng máy chủ game).</p>
 <div class="ctl">
 <b>Chia sẻ v. phẩm</b><span>Nhân vật đi làm nhiệm vụ phải ra bản đồ xa mà thiếu Thần Hành Phù / Tiêu Dao Phù / Hồi Thành Phù (tick loại nào trong nút "…") thì xin từ nhân vật đang luyện công có món đó. Hai bên về thành, giao, rồi quay lại việc cũ.</span>
 <b>Chia sẻ v. phẩm NV</b><span>Nhiệm vụ Mặc Thạch / Hằng ngày đòi trang bị mà nhân vật này chưa có thì xin nhân vật khác đã nhặt được nhờ luật lọc "Trang bị nhiệm vụ".</span>
@@ -674,7 +713,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h2 id="kynang">Tab Kỹ năng</h2>
 <p class="lead">Bot ra chiêu gì, theo thứ tự nào, và buff gì lên mình.</p>
 <div class="sec">
-<figure class="shot"><img src="img/tab-kynang.png" alt="Tab Kỹ năng: kỹ năng chiến đấu, kỹ năng hỗ trợ, đánh mặc định" width="320" height="817"><figcaption>Tab Kỹ năng.</figcaption></figure>
+<figure class="shot"><img src="img/tab-kynang.png" alt="Tab Kỹ năng: kỹ năng chiến đấu, kỹ năng hỗ trợ, đánh mặc định" width="320" height="825"><figcaption>Tab Kỹ năng.</figcaption></figure>
 <div>
 <h4>Kỹ năng chiến đấu</h4>
 <p>Danh sách có thứ tự. Mỗi lần ra chiêu, bot lấy <b>dòng đầu tiên đủ điều kiện</b> (đã hồi chiêu, đúng vũ khí, đúng tác vụ). Nên để chiêu mạnh ở trên, chiêu cơ bản ở cuối làm dự phòng. Bấm <b>+</b> để thêm, bấm đúp hoặc chuột phải một dòng để sửa, <b>⋯</b> để lưu danh sách ra tệp cho nhân vật khác cùng phái nạp.</p>
@@ -690,7 +729,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <p>Buff tự dùng lên mình (hoặc đồng đội), theo thứ tự từ trên xuống. Thường là chiêu tăng công / thủ có thời hạn.</p>
 <figure class="inline"><img src="img/cs-hotro.png" alt="Hộp Thêm kỹ năng hỗ trợ" width="446" height="271"><figcaption>Hộp thêm / sửa một dòng kỹ năng hỗ trợ.</figcaption></figure>
 <div class="ctl">
-<b>Điều kiện + số</b><span>Luôn sử dụng (dùng lại khi hết hiệu ứng), hoặc khi máu / nội lực dưới mức, khi có địch quanh…</span>
+<b>Điều kiện + số</b><span><b>Luôn sử dụng</b>: dùng lại khi hiệu ứng không còn trên người (hào quang: luôn bật). <b>Giãn cách (ms)</b>: mỗi chừng ấy mili giây. <b>Sinh lực (%) &lt;</b>: khi máu dưới mức. Có nhiều dòng hào quang thì bot luân phiên để hưởng được nhiều vòng.</span>
 <b>Mục tiêu</b><span>Bản thân, Cùng tổ đội, Cùng bang, Đội trưởng, Danh sách theo sau, Danh sách tổ đội. Chọn nhiều thì buff lần lượt cho những người đó khi họ ở trong tầm.</span>
 </div>
 <h4>Đánh mặc định (đánh tay)</h4>
@@ -699,7 +738,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <h3 id="doithu">Trang con: Đối thủ (chọn mục tiêu)</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-doithu.png" alt="Trang Đối thủ" width="320" height="817"><figcaption>Kỹ năng › Đối thủ.</figcaption></figure>
+<figure class="shot"><img src="img/sub-doithu.png" alt="Trang Đối thủ" width="320" height="825"><figcaption>Kỹ năng › Đối thủ.</figcaption></figure>
 <div>
 <p>Ai được đánh và ai đánh trước, dùng cho mọi việc có đánh (luyện công, Auto PK).</p>
 <h4>Ưu tiên theo</h4>
@@ -719,7 +758,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <b>Phản đòn ≥ … %</b><span>Bot tự học quái phản đòn: đánh trúng mà máu mình mất ngay từ số % này gần như mỗi đòn thì ghi tên quái vào danh sách và không đánh nữa.</span>
 <b>Bỏ quái lag … giây</b><span>Đánh mãi một con không mất máu quá số giây này (bị tường chặn, lag) thì bỏ, 15 giây sau xét lại.</span>
 <b>Đánh đến chết</b><span>Đã chọn ai thì đánh tới chết, không đổi sang mục tiêu gần / ưu tiên hơn.</span>
-<b>Theo đội trưởng</b><span>Đánh cùng mục tiêu với đội trưởng.</span>
+<b>Theo đội trưởng</b><span>Đánh cùng mục tiêu với đội trưởng (không ở trong tổ đội: người mình đang theo sau).</span>
 <b>Bỏ qua boss / Bỏ quái khuất</b><span>Không đánh boss (tên xanh / vàng); không đánh quái bị vật cản che.</span>
 <b>Giữ k. cách + loại + hai số</b><span>Đánh loại đối thủ này mà nó gần hơn số đầu hoặc xa hơn số sau thì ngừng đánh, lùi ra / lại gần tới giữa khoảng rồi mới đánh tiếp. Cho phái đánh xa giữ khoảng cách với boss hoặc người.</span>
 </div>
@@ -730,7 +769,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <h2 id="taikhoan">Tab Tài khoản</h2>
 <p class="lead">Đăng nhập tự động, đường dẫn game, mang thiết lập sang máy khác.</p>
 <div class="sec">
-<figure class="shot"><img src="img/tab-taikhoan.png" alt="Tab Tài khoản" width="320" height="817"><figcaption>Tab Tài khoản.</figcaption></figure>
+<figure class="shot"><img src="img/tab-taikhoan.png" alt="Tab Tài khoản" width="320" height="825"><figcaption>Tab Tài khoản.</figcaption></figure>
 <div>
 <h4>Khung Thông tin đăng nhập</h4>
 <p>Của riêng nhân vật đang chọn, không bao giờ bị sao chép sang nhân vật khác.</p>
@@ -738,14 +777,14 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <b>P.vùng / M.chủ</b><span>Phân vùng và máy chủ. Danh sách lấy từ game bằng nút "Cập nhật danh sách máy chủ" bên dưới.</span>
 <b>Tài khoản, Mật khẩu</b><span>Tài khoản game của nhân vật này. Cả hai đều bị che, tick <b>Hiện</b> để xem. Mật khẩu được mã hoá theo tài khoản Windows đang dùng, máy khác không đọc được.</span>
 <b>Thuộc nhóm, Trưởng nhóm</b><span>Chia nhân vật thành nhóm. Bấm phím tắt (như <kbd>Ctrl</kbd>+<kbd>P</kbd>) trong game của trưởng nhóm thì mọi nhân vật được tick trong nhóm cùng làm theo.</span>
-<b>Tự động đăng nhập</b><span>Nhân vật được tick mà chưa mở game thì bot tự mở game theo đường dẫn và đăng nhập; bị văng ra màn hình đăng nhập thì tự vào lại.</span>
+<b>Tự động đăng nhập</b><span>Nhân vật được tick mà chưa mở game thì bot tự mở game theo đường dẫn và đăng nhập (nhiều nhân vật thì lần lượt từng người); bị văng ra màn hình đăng nhập thì tự vào lại. Game tự kết nối lại ("Tiến hành kết nối lại sau … giây") quá một phút mà chưa được thì bot cho rời trò chơi về màn hình đăng nhập rồi đăng nhập lại. Game kẹt ở "Kết nối máy chủ thất bại" quá 20 giây (hoặc quá 3 phút không thấy màn hình đăng nhập) thì bot tắt game đó và mở game mới. Thử 5 lần không vào được thì thôi: xem lại tài khoản, mật khẩu, máy chủ. Bỏ tick hoặc Hủy đăng nhập (chuột phải bảng nhân vật) là thôi.</span>
 </div>
 <h4>Khung Hệ thống</h4>
 <div class="ctl">
 <b>Đường dẫn game + "…"</b><span>Tệp gamecl.exe của nhân vật đang chọn, dùng khi tự đăng nhập. Nhân vật mới chưa đặt thì lấy của nhân vật ngay trên nó trong bảng.</span>
 <b>Cập nhật danh sách máy chủ</b><span>Đọc danh sách phân vùng / máy chủ từ thư mục game vào bot, dùng chung cho mọi nhân vật. Làm một lần sau khi đặt đường dẫn.</span>
 <b>Thời gian đăng nhập tối đa</b><span>Quá chừng này giây chưa vào được game thì thử lại.</span>
-<b>Thời gian chờ đăng nhập lại</b><span>Chờ chừng này giây sau mỗi lần mất kết nối rồi mới đăng nhập lại.</span>
+<b>Thời gian chờ đăng nhập lại</b><span>Chờ chừng này giây sau mỗi lần mất kết nối / đăng nhập không được rồi mới đăng nhập lại; cũng là khoảng cách giữa hai nhân vật khi bot đăng nhập lần lượt. Game đi qua proxy: chờ ít nhất 60 giây.</span>
 <b>Tự ẩn game</b><span>Vào game xong thì ẩn cửa sổ game. Bấm đúp tên trong bảng để hiện lại.</span>
 </div>
 <h4>Khung Thiết lập bot</h4>
@@ -757,7 +796,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <h3 id="proxy">Trang con: Proxy</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-proxy.png" alt="Trang Proxy" width="320" height="817"><figcaption>Tài khoản › Proxy.</figcaption></figure>
+<figure class="shot"><img src="img/sub-proxy.png" alt="Trang Proxy" width="320" height="825"><figcaption>Tài khoản › Proxy.</figcaption></figure>
 <div>
 <p>Cho mỗi game đi internet qua một proxy riêng ngay bên trong game, không cần chương trình proxy ngoài. Proxy phải được gán <b>trước khi đăng nhập</b>; bot gửi proxy vào mọi game nó thấy ngay khi game mở. Proxy hỏng thì game mất kết nối chứ không bao giờ đi thẳng.</p>
 <div class="ctl">
@@ -772,7 +811,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <h3 id="tuychon">Trang con: Tùy chọn game</h3>
 <div class="sec">
-<figure class="shot"><img src="img/sub-tuychon.png" alt="Trang Tùy chọn game" width="320" height="817"><figcaption>Tài khoản › Tùy chọn game.</figcaption></figure>
+<figure class="shot"><img src="img/sub-tuychon.png" alt="Trang Tùy chọn game" width="320" height="825"><figcaption>Tài khoản › Tùy chọn game.</figcaption></figure>
 <div>
 <p>Chỉnh cách game vẽ, cho nhân vật được tick, để chạy nhiều game nhẹ máy. Đây chỉ là hiển thị phía máy mình; bot vẫn thấy mọi người chơi.</p>
 <div class="ctl">
@@ -787,7 +826,7 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 
 <!-- ============================ NHẶT ============================ -->
 <h2 id="nhat">Nhặt vật phẩm &amp; lọc đồ</h2>
-<p class="lead">Cửa sổ mở từ nút "…" cạnh "Nhặt v. phẩm" ở tab Tác vụ. Đây là chỗ quyết định nhặt gì và giữ lại trang bị nào.</p>
+<p class="lead">Cửa sổ mở từ nút "…" cạnh "Nhặt v. phẩm" ở tab Tác vụ. Đây là chỗ quyết định nhặt gì và giữ lại trang bị nào. Sửa xong bấm <b>Lưu</b> (lưu rồi đóng); <b>Bỏ qua</b> là đóng mà không lưu.</p>
 <div class="sec wide">
 <figure class="inline"><img src="img/cs-nhat.png" alt="Cửa sổ Nhặt vật phẩm: loại nhặt, vật phẩm đen, lọc trang bị, lọc kết hợp" width="876" height="589"><figcaption>Nhặt vật phẩm. Bên trái: nhặt gì. Bên phải: trang bị nhặt được phải đạt thuộc tính gì mới giữ.</figcaption></figure>
 <div>
@@ -799,10 +838,10 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <b>Không nhặt đồ người khác</b><span>Bỏ qua đồ còn thuộc quyền người khác.</span>
 </div>
 <h4>Nửa phải: lọc trang bị</h4>
-<p>Áp dụng cho trang bị nhặt được (và túi hành trang nếu tick <b>Lọc túi hành trang</b>). Mỗi dòng trong bảng là một thuộc tính với <b>Min / Max</b>; tick dòng nào thì trang bị có thuộc tính đó trong khoảng là <b>đạt</b>. Thêm thuộc tính bằng ô thả xuống phía trên và +.</p>
+<p>Tick <b>Lọc trang bị</b> để dùng bảng này. Áp dụng cho trang bị trong túi đạo cụ (và túi hành trang nếu tick <b>Lọc túi hành trang</b>), trừ đồ vừa tháo ra và đồ bot tự lấy ra. Mỗi dòng trong bảng là một thuộc tính với <b>Min / Max</b>; tick dòng nào thì trang bị có thuộc tính đó trong khoảng là <b>đạt</b>. Thêm thuộc tính bằng ô thả xuống phía trên và +. Không tick cả Lọc trang bị lẫn Lọc kết hợp thì mọi trang bị đều được giữ.</p>
 <div class="ctl">
 <b>Lọc kết hợp #0…</b><span>Bộ luật nhiều điều kiện cùng lúc: trang bị phải có đủ các thuộc tính #1, #2, #3… đồng thời mới đạt. Có thể làm nhiều bộ (#0, #1…), tick <b>Dùng bộ này</b> cho bộ đang chọn. <b>Khớp thứ tự thuộc tính</b>: các dòng phải đúng thứ tự trên món.</span>
-<b>Xử lý trang bị không đạt</b><span><b>Rã</b> (lấy mảnh / huyền tinh), <b>Bỏ qua</b> (để lại trong túi), hoặc vứt. Đồ đang mặc, đồ trong Thay đổi trang bị và đồ nhiệm vụ không bao giờ bị rã.</span>
+<b>Xử lý trang bị không đạt</b><span><b>Giữ lại</b> (để trong túi), <b>Rã</b> (lấy mảnh / huyền tinh) hoặc <b>Vứt bỏ</b>. Không bao giờ rã / vứt: đồ trong Thay đổi trang bị, đồ nhiệm vụ, đồ hiếm, đồ khoá, Hoàng Kim, ngựa, mặt nạ; đồ đã mặc khi bật Khóa trang bị (Hậu cần).</span>
 </div>
 <p class="tip">Ví dụ hay dùng: tick "Không thể phá hủy", "Sát thương vật lý ngoại công ≥ 50", "Tất cả kỹ năng +cấp ≥ 1" là ba điều kiện đơn; món có một trong ba là giữ. Lọc kết hợp #0 "Hóa sát thương thành nội lực ≥ 10 và Giới tính nam và Kháng ≥ 15" là món phải có cả ba.</p>
 </div></div>
@@ -825,7 +864,8 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td>Bật / tắt Bỏ qua Bang Hội.</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>X</kbd></td><td>Mở túi thuốc máu ngay, ở mọi bản đồ.</td></tr>
 <tr><td><kbd>Ctrl</kbd>+<kbd>R</kbd></td><td>Lưu rương gần nhất (khu phi chiến đấu). Trưởng nhóm: cả nhóm về cùng thành rồi lưu.</td></tr>
-<tr><td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td><td>Trên trưởng nhóm: chỉ tác động nhân vật đó, không lan cả nhóm.</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>Mở rương từ xa.</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td><td>Tạm dừng / chạy tiếp bot. Lúc tạm dừng nhân vật vẫn được tick, bot chỉ bơm máu, mana. Trên trưởng nhóm: chỉ nhân vật đó, không lan cả nhóm.</td></tr>
 </table></div>
 
 <!-- ============================ NGỮ CẢNH ============================ -->
@@ -834,25 +874,27 @@ svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 <div class="scen">
 <div><h4>Treo luyện công qua đêm</h4>
 <p>L. công: làm lộ trình 4–6 điểm, Tự đánh 400, bật Về thành khi hết bình máu và đầy hành trang.</p>
-<p>Hậu cần: Mua thuốc (bình máu 5/10, nội lực 5/10), Mua tạp hóa (Thổ địa phù 2/2), Sửa ở thành, Gửi tiền, Khóa trang bị.</p>
+<p>Hậu cần: Mua thuốc (bình máu 5/10, nội lực 5/10), Mua tạp hóa (Thổ địa phù 2/2), Sửa ở thành, Gửi tiền, Khóa trang bị. Bản đồ thiết lập là thành gần bãi; ở 7 thành chọn Rương lưu theo hướng gần đường ra bãi để Thổ địa phù đưa về đúng rương đó.</p>
 <p>Phục hồi: HP % 40, TĐP HP &lt; 1500, Tự nhồi 3 giây. Tự vệ: Thổ địa phù, hoặc Đánh trả với "Đánh không nổi: chạy".</p>
-<p>Tác vụ: tick Luyện công, thêm Nghỉ khi bị chết 3 lần trong 10 phút để không tốn phù khi bị phá.</p></div>
+<p>Tác vụ: tick Luyện công. Tự vệ/PK › Phục hồi: bật Nghỉ … khi bị chết 3 lần trong 10 phút để không tốn phù khi bị phá.</p></div>
 <div><h4>Nhiều nhân vật làm nhiệm vụ mỗi ngày</h4>
 <p>Tác vụ: tick NV Môn phái, NV Hằng ngày, NV Mặc Thạch, Năng động, Nhận thưởng Thẻ tháng, Nhận buff Bang hội; để chúng trên Luyện công. Chuột phải Hằng ngày / Mặc Thạch để chọn thành và cho mua trang bị.</p>
-<p>Thưởng: tick Điểm danh, N. thưởng năng động, Tự đọc thư.</p>
+<p>Thưởng: tick Điểm danh ngày, N. thưởng năng động, Tự đọc thư.</p>
+<p>Mùa Chiến Lệnh: tick thêm tác vụ Chiến lệnh, chuột phải để chọn Tống Kim đủ 3 trận, Phong Lăng Độ 1 chuyến trọn, NV Mặc Thạch 10 mỗi ngày (thứ 2 thêm 30) và Nhận thưởng Chiến lệnh. Ngoài mùa Chiến Lệnh tác vụ này không làm gì.</p>
 <p>Chia sẻ, gom, giao: bật Chia sẻ v. phẩm và Chia sẻ v. phẩm NV để nhân vật thiếu phù / trang bị xin nhân vật khác.</p>
 <p>Chọn nhiều nhân vật bằng Ctrl rồi tick một lần cho tất cả.</p></div>
 <div><h4>Đi Tống Kim, công thành, săn boss</h4>
 <p>Tác vụ: Auto PK, Tự đánh 1250, Bỏ quái thường, Không đuổi theo (Tống Kim), Nhặt v. phẩm.</p>
 <p>Đối thủ: Bỏ qua Bang Hội, D. sách đen có Cửa Thành và lính gác, Ưu tiên Lượng máu rồi Khoảng cách.</p>
 <p>Kỹ năng: xếp chiêu mạnh trên cùng với Tác vụ = Auto PK, đặt phím Đánh mặc định (ví dụ Space) để tự tay nhắm.</p>
-<p>Phục hồi: dòng HP PK cao (1500), Tự nhồi. Hậu cần: Thay đổi t. bị với bộ PvP. Tống Kim: Nhận thuốc m. phí.</p></div>
+<p>Phục hồi: dòng HP PK cao (1500), Tự nhồi. Hậu cần: Thay đổi t. bị với bộ PvP. Tự vệ/PK: Nhận thuốc m. phí khi đi Tống Kim.</p></div>
 <div><h4>Một nhóm theo sau nhân vật chính</h4>
 <p>Tổ đội: ở mọi nhân vật ghi tên nhân vật chính lên đầu danh sách Tổ đội và Theo sau; nhân vật chính tick Đội trưởng, các nhân vật kia tick Vào tổ đội.</p>
 <p>Tác vụ: bật Tự theo sau; Theo sau chọn mỗi nhân vật một phía đứng khác nhau (Trái, Phải, Sau…) để không bị đánh chùm.</p>
 <p>Đối thủ: tick Theo đội trưởng để cả nhóm đánh cùng mục tiêu. Kỹ năng hỗ trợ: buff mục tiêu Cùng tổ đội. Tự vệ: Bảo vệ cừu sát ghi tên nhau.</p></div>
 <div><h4>Nhân vật mới tạo</h4>
-<p>Tác vụ: chỉ tick Luyện công Tân thủ, chuột phải để chọn môn phái và tỉ lệ cộng điểm. Không cần làm lộ trình hay danh sách kỹ năng; bot tự chọn bãi theo cấp và tự mặc đồ nhặt được.</p>
+<p>Tác vụ: chỉ tick Luyện công Tân thủ, chuột phải để chọn môn phái và tỉ lệ cộng điểm. Không cần làm lộ trình hay danh sách kỹ năng; bot tự chọn bãi theo cấp (cấp 50-60: Lưu Tiên Động rồi Thiên Tâm Động; hệ Hỏa đi Thiên Tâm Động trước) và tự mặc đồ nhặt được.</p>
+<p>Nhiều nhân vật mới cùng bãi tự vào chung một đội. Nhân vật mới ở trong đội mà đội trưởng là nhân vật trong bot thì tự theo sau đội trưởng đó.</p>
 <p>Hậu cần: Mua thuốc tối thiểu, Khóa trang bị. Sau cấp 60 chuyển sang Luyện công thường với lộ trình riêng.</p></div>
 <div><h4>Chạy nhiều game trên máy yếu</h4>
 <p>Tài khoản › Tùy chọn game: Tối ưu bộ nhớ, tắt Hiện người chơi, Tinh giản hiệu ứng, Giới hạn FPS 30. Tài khoản: Tự ẩn game.</p>
