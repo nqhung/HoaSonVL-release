@@ -65,6 +65,24 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 .scen div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
 .scen h4{margin:0 0 6px}
 .scen p{font-size:13.5px;margin:4px 0}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px;margin:12px 0;overflow-x:auto}
+.fig svg{display:block;width:100%;height:auto;min-width:760px;color:var(--ink)}
+.fig.small svg{min-width:420px;max-width:520px;margin:0 auto}
+.fig figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;max-width:76ch}
+.fig .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.fig .sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px;border:1.5px solid}
+svg .bx{fill:var(--paper);stroke:var(--line)}
+svg .bx-a{fill:var(--soft);stroke:var(--accent)}
+svg .bx-w{fill:var(--warn-bg);stroke:var(--warn)}
+svg .t{fill:var(--ink);font-family:var(--font);font-size:12.5px}
+svg .tb{fill:var(--ink);font-family:var(--font);font-size:13px;font-weight:700}
+svg .ts{fill:var(--muted);font-family:var(--font);font-size:11px}
+svg .ta{fill:var(--accent);font-family:var(--font);font-size:11.5px;font-weight:600}
+svg .tw{fill:var(--warn);font-family:var(--font);font-size:11.5px}
+svg .tm{fill:var(--ink);font-family:var(--mono);font-size:11.5px}
+svg .ar{stroke:var(--muted);fill:none;stroke-width:1.5}
+svg .ar-a{stroke:var(--accent);fill:none;stroke-width:1.7}
+svg .ar-w{stroke:var(--warn);fill:none;stroke-width:1.4;stroke-dasharray:5 4}
 @media (max-width:860px){
   .wrap{grid-template-columns:1fr}
   nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:16px 0}
@@ -80,7 +98,7 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 <div class="wrap">
 <nav>
   <h1>Hướng dẫn HoaSonVL</h1>
-  <div class="v">Bản 1.3.4 · Võ Lâm Truyền Kỳ 2.0</div>
+  <div class="v">Bản 1.4.1 · Võ Lâm Truyền Kỳ 2.0</div>
   <a href="#batdau">Bắt đầu</a>
   <a class="sub" href="#taimoi">· Tải mới và cập nhật</a>
   <a href="#danhsach">Bảng nhân vật</a>
@@ -284,7 +302,55 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 </div></div>
 
 <h3 id="truongca">Trường Ca (chiến đội)</h3>
-<p class="lead">Trường Ca Sơn Trang là bản đồ luyện công kinh nghiệm cao, mở bằng <b>Tín Vật Trường Ca</b> ở NPC <b>Trường Ca Môn Môn Nhân</b> của 7 thành lớn. Một chiến đội tối đa 6 người: người mở nhận x8 kinh nghiệm, người khác x4 (nộp thêm Tín Vật để lên x8). Tính năng mới, có từ bản sau 1.4.0.</p>
+<p class="lead">Trường Ca Sơn Trang là bản đồ luyện công kinh nghiệm cao, mở bằng <b>Tín Vật Trường Ca</b> ở NPC <b>Trường Ca Môn Môn Nhân</b> của 7 thành lớn. Một chiến đội tối đa 6 người: người mở nhận x8 kinh nghiệm, người khác x4 (nộp thêm Tín Vật để lên x8). Có từ bản 1.4.1.</p>
+<figure class="fig">
+<svg viewBox="0 0 960 300" role="img" aria-label="Lập chiến đội Trường Ca: chọn 1 đến 6 nhân vật trong bảng, chuột phải lên người sẽ mở sơn trang, chọn Lập chiến đội Trường Ca, chọn đội trưởng, thành mở, giờ mở tối đa, tick tác vụ; cả nhóm nhận chung danh sách với người mở đứng đầu.">
+<defs><marker id="tcA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+<rect class="bx" x="10" y="16" width="210" height="268" rx="8" stroke-width="1.5"/>
+<text class="tb" x="24" y="40">Bảng nhân vật</text>
+<text class="ts" x="24" y="58">Ctrl + bấm: chọn 1–6 nhân vật</text>
+<rect class="bx-a" x="22" y="70" width="186" height="26" rx="5" stroke-width="2"/>
+<text class="t" x="32" y="88" font-weight="700">TiểuLong</text><text class="ta" x="126" y="88">◀ chuột phải</text>
+<rect class="bx-a" x="22" y="100" width="186" height="24" rx="5" stroke-width="1" opacity=".6"/><text class="t" x="32" y="117">BạchVân</text>
+<rect class="bx-a" x="22" y="128" width="186" height="24" rx="5" stroke-width="1" opacity=".6"/><text class="t" x="32" y="145">HồngNhạn</text>
+<rect class="bx-a" x="22" y="156" width="186" height="24" rx="5" stroke-width="1" opacity=".6"/><text class="t" x="32" y="173">LăngBa</text>
+<rect class="bx-a" x="22" y="184" width="186" height="24" rx="5" stroke-width="1" opacity=".6"/><text class="t" x="32" y="201">ThanhPhong</text>
+<rect class="bx-a" x="22" y="212" width="186" height="24" rx="5" stroke-width="1" opacity=".6"/><text class="t" x="32" y="229">MinhNguyệt</text>
+<text class="ts" x="32" y="262">dòng đang tick, đã vào game</text>
+<line class="ar" x1="220" y1="83" x2="250" y2="104" marker-end="url(#tcA)"/>
+<rect class="bx" x="254" y="70" width="200" height="140" rx="8" stroke-width="1.5"/>
+<text class="t" x="268" y="96" fill="var(--muted)">Thêm...</text>
+<rect class="bx-a" x="262" y="106" width="184" height="26" rx="5" stroke-width="2"/>
+<text class="t" x="270" y="124" font-weight="700">Lập chiến đội Trường Ca...</text>
+<text class="t" x="268" y="156">Làm đội trưởng Trường Ca</text>
+<text class="t" x="268" y="184">Giải tán chiến đội Trường Ca...</text>
+<line class="ar" x1="454" y1="119" x2="484" y2="119" marker-end="url(#tcA)"/>
+<rect class="bx-a" x="488" y="16" width="226" height="268" rx="8" stroke-width="1.5"/>
+<text class="tb" x="502" y="40">Hộp chiến đội (tối đa 6)</text>
+<text class="t" x="502" y="72">Đội trưởng</text><rect class="bx" x="590" y="58" width="112" height="22" rx="4"/><text class="tm" x="598" y="74">TiểuLong ▾</text>
+<text class="t" x="502" y="104">Thành mở</text><rect class="bx" x="590" y="90" width="112" height="22" rx="4"/><text class="tm" x="598" y="106">Tương Dương ▾</text>
+<text class="t" x="502" y="136">Giờ mở tối đa</text><rect class="bx" x="590" y="122" width="112" height="22" rx="4"/><text class="tm" x="598" y="138">4 giờ ▾</text>
+<text class="t" x="502" y="170">☑ Tick tác vụ Trường Ca</text>
+<text class="tw" x="502" y="198">ghi lý do nếu một acc chưa đủ</text>
+<text class="tw" x="502" y="214">điều kiện / chuyển từ nhóm khác</text>
+<text class="ts" x="502" y="262">Huỷ · OK</text>
+<line class="ar" x1="714" y1="150" x2="744" y2="150" marker-end="url(#tcA)"/>
+<rect class="bx" x="748" y="16" width="202" height="268" rx="8" stroke-width="1.5"/>
+<text class="tb" x="762" y="40">Cả nhóm nhận chung</text>
+<text class="tm" x="762" y="66">1 TiểuLong (người mở)</text>
+<text class="tm" x="762" y="84">2 BạchVân</text>
+<text class="tm" x="762" y="102">3 HồngNhạn</text>
+<text class="tm" x="762" y="120">4 LăngBa</text>
+<text class="tm" x="762" y="138">5 ThanhPhong</text>
+<text class="tm" x="762" y="156">6 MinhNguyệt</text>
+<text class="t" x="762" y="186">Thành mở, giờ mở: chung</text>
+<text class="t" x="762" y="206">Tác vụ Trường Ca: tick</text>
+<text class="ts" x="762" y="234">Nộp Tín Vật x8, Ngọc Lộ Hoàn,</text>
+<text class="ts" x="762" y="250">tiền sửa đồ: riêng từng acc</text>
+<text class="ts" x="762" y="266">(chuột phải dòng Trường Ca)</text>
+</svg>
+<figcaption>Lập nhóm một lần là xong: cả nhóm nhận chung danh sách, người được bấm chuột phải đứng đầu (người mở sơn trang, cũng là đội trưởng). Đổi người mở: chuột phải người khác trong nhóm → <b>Làm đội trưởng Trường Ca</b>. Không phải gõ hay dán tên.</figcaption>
+</figure>
 <div class="sec">
 <figure class="shot"><img src="img/hop-chiendoi.png" alt="Hộp Lập chiến đội Trường Ca: thành viên, đội trưởng, thành mở, giờ mở tối đa, tick tác vụ cho cả nhóm" width="396" height="369"><figcaption>Lập chiến đội Trường Ca. Ảnh chụp lúc các dòng nhân vật chưa tick: hộp ghi lý do từng người và nút OK mờ.</figcaption></figure>
 <div>
@@ -324,12 +390,83 @@ kbd{font-family:var(--mono);font-size:12.5px;background:var(--paper);border:1px 
 </div></div>
 <div class="sec wide"><div>
 <h4>Một chuyến đi diễn ra thế nào</h4>
+<figure class="fig">
+<div class="legend"><span><i class="sw" style="background:var(--soft);border-color:var(--accent)"></i>bot tự làm</span><span><i class="sw" style="background:var(--paper);border-color:var(--line)"></i>chờ / đi lại</span><span><i class="sw" style="background:var(--warn-bg);border-color:var(--warn)"></i>huỷ chuyến / ra ngoài</span></div>
+<svg viewBox="0 0 980 545" role="img" aria-label="Một chuyến Trường Ca: người mở tới NPC, tập trung cả nhóm, mua đồ, mở sơn trang bằng Tín Vật, ra Bia Đá nộp thêm rồi vào lại và báo sẵn sàng; thành viên bỏ việc đang làm, tới cùng NPC, vào đội người mở, có thể nộp Tín Vật x8, chờ người mở sẵn sàng rồi vào sơn trang đã mở; trong sơn trang cả đội luyện công quanh 5 điểm, cần về thành thì ra Bia Đá rồi vào lại, rớt mạng hoặc chết thì vào lại, hết giờ thì xong hôm nay.">
+<defs><marker id="tcB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker>
+<marker id="tcC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent)"/></marker></defs>
+<text class="ts" x="12" y="24" font-weight="700" letter-spacing="1">NGƯỜI MỞ</text>
+<text class="ts" x="12" y="204" font-weight="700" letter-spacing="1">THÀNH VIÊN</text>
+<text class="ts" x="12" y="384" font-weight="700" letter-spacing="1">CẢ ĐỘI · TRONG SƠN TRANG</text>
+<line x1="10" y1="164" x2="970" y2="164" stroke="var(--line)" stroke-dasharray="4 4"/>
+<line x1="10" y1="344" x2="970" y2="344" stroke="var(--line)" stroke-dasharray="4 4"/>
+<rect class="bx" x="12" y="40" width="140" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="22" y="62">Tới NPC</text><text class="t" x="22" y="80">Trường Ca Môn</text><text class="t" x="22" y="96">Môn Nhân</text><text class="ts" x="22" y="112">ở thành mở</text>
+<rect class="bx-a" x="172" y="40" width="150" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="182" y="62">Tập trung</text><text class="t" x="182" y="80">cả nhóm vào đội</text><text class="t" x="182" y="96">đọc thời gian tu luyện</text><text class="ts" x="182" y="112">chờ tối đa 10 phút</text>
+<rect class="bx-a" x="342" y="40" width="140" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="352" y="62">Chuẩn bị</text><text class="t" x="352" y="80">mua Ngọc Lộ Hoàn</text><text class="t" x="352" y="96">mang tiền sửa đồ</text><text class="ts" x="352" y="112">sửa đồ, đủ bình</text>
+<rect class="bx-a" x="502" y="40" width="150" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="512" y="62">Mở sơn trang</text><text class="t" x="512" y="80">lấy 1 Tín Vật ra túi</text><text class="t" x="512" y="96">"Ta muốn mở…"</text><text class="ts" x="512" y="112">vào: 2 giờ</text>
+<rect class="bx-a" x="672" y="40" width="150" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="682" y="62">Nộp thêm</text><text class="t" x="682" y="80">ra Bia Đá → NPC</text><text class="t" x="682" y="96">+2 giờ mỗi Tín Vật</text><text class="ts" x="682" y="112">theo giờ đã tính</text>
+<rect class="bx-a" x="842" y="40" width="128" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="852" y="62">Vào lại</text><text class="t" x="852" y="80">sơn trang</text><text class="ta" x="852" y="98">báo "sẵn sàng"</text>
+<g><line class="ar" x1="152" y1="80" x2="168" y2="80" marker-end="url(#tcB)"/><line class="ar" x1="322" y1="80" x2="338" y2="80" marker-end="url(#tcB)"/><line class="ar" x1="482" y1="80" x2="498" y2="80" marker-end="url(#tcB)"/><line class="ar" x1="652" y1="80" x2="668" y2="80" marker-end="url(#tcB)"/><line class="ar" x1="822" y1="80" x2="838" y2="80" marker-end="url(#tcB)"/></g>
+<rect class="bx-w" x="172" y="128" width="150" height="30" rx="6" stroke-width="1.2"/>
+<text class="tw" x="180" y="148">thiếu giờ / người → huỷ</text>
+<rect class="bx" x="12" y="220" width="140" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="22" y="242">Bỏ việc đang làm</text><text class="t" x="22" y="260">tới cùng NPC</text><text class="ts" x="22" y="276">Thần Hành Phù,</text><text class="ts" x="22" y="290">Xa Phu…</text>
+<rect class="bx-a" x="172" y="220" width="150" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="182" y="242">Vào đội</text><text class="t" x="182" y="260">rời đội cũ,</text><text class="t" x="182" y="276">vào đội người mở</text>
+<rect class="bx-a" x="342" y="220" width="140" height="80" rx="8" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text class="tb" x="352" y="242">(tuỳ chọn)</text><text class="t" x="352" y="260">nộp Tín Vật</text><text class="ts" x="352" y="276">x4 → x8 kinh nghiệm</text>
+<rect class="bx" x="502" y="220" width="150" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="512" y="242">Chờ</text><text class="t" x="512" y="260">người mở báo</text><text class="t" x="512" y="276">"sẵn sàng"</text>
+<rect class="bx-a" x="672" y="220" width="298" height="80" rx="8" stroke-width="1.5"/>
+<text class="tb" x="682" y="242">Vào sơn trang đã mở</text><text class="t" x="682" y="260">"Ta muốn vào Trường Ca Sơn Trang đã mở"</text><text class="t" x="682" y="276">→ dòng có tên người mở → "Vào"</text>
+<g><line class="ar" x1="152" y1="260" x2="168" y2="260" marker-end="url(#tcB)"/><line class="ar" x1="322" y1="260" x2="338" y2="260" marker-end="url(#tcB)"/><line class="ar" x1="482" y1="260" x2="498" y2="260" marker-end="url(#tcB)"/><line class="ar" x1="652" y1="260" x2="668" y2="260" marker-end="url(#tcB)"/></g>
+<path class="ar-a" d="M906 120V176H577V216" marker-end="url(#tcC)"/>
+<text class="ta" x="600" y="190">tín hiệu "sẵn sàng" giữa các acc trong bot</text>
+<rect class="bx-a" x="12" y="400" width="270" height="96" rx="8" stroke-width="1.5"/>
+<text class="tb" x="22" y="422">Luyện công quanh 5 điểm</text><text class="t" x="22" y="440">luật Luyện công của từng acc: quây quái,</text><text class="t" x="22" y="456">acc bùa đánh bùa trước, theo đội trưởng</text><text class="ts" x="22" y="474">chưa có quái: đứng ở điểm gần nhất</text><text class="ts" x="22" y="488">điểm thấy trống từ xa: bỏ qua</text>
+<rect class="bx-w" x="302" y="400" width="210" height="96" rx="8" stroke-width="1.5"/>
+<text class="tb" x="312" y="422">Cần về thành</text><text class="t" x="312" y="440">máu dưới mốc TĐP, hết bình,</text><text class="t" x="312" y="456">đầy túi… (cấm phù trong này)</text><text class="ts" x="312" y="474">→ ra Bia Đá, mua / hồi,</text><text class="ts" x="312" y="488">rồi vào lại</text>
+<rect class="bx" x="532" y="400" width="190" height="96" rx="8" stroke-width="1.5"/>
+<text class="tb" x="542" y="422">Rớt mạng, chết</text><text class="t" x="542" y="440">đăng nhập lại / hồi sinh</text><text class="t" x="542" y="456">rồi vào lại cùng cách,</text><text class="t" x="542" y="472">xin vào lại đội người mở</text>
+<rect class="bx-a" x="742" y="400" width="228" height="96" rx="8" stroke-width="1.5"/>
+<text class="tb" x="752" y="422">Hết giờ</text><text class="t" x="752" y="440">game đưa cả đội ra thành</text><text class="t" x="752" y="456">không còn thấy sơn trang</text><text class="ta" x="752" y="474">→ xong hôm nay,</text><text class="ta" x="752" y="490">quay về Luyện công</text>
+<path class="ar" d="M906 120V132H976V384H147V396" marker-end="url(#tcB)"/>
+<path class="ar" d="M821 300V372H130V396" marker-end="url(#tcB)"/>
+<text class="tw" x="12" y="530">Ra ngoài giữa chừng (về thành, rớt mạng, chết): vào lại cùng đường của thành viên; người mở chọn dòng tên mình.</text>
+</svg>
+<figcaption>Người mở nộp thêm Tín Vật ngay sau khi mở rồi mới báo "sẵn sàng", để thành viên vào một lần: lúc người mở ở ngoài, game không cho ai vào sơn trang.</figcaption>
+</figure>
+<figure class="fig small">
+<svg viewBox="0 0 520 460" role="img" aria-label="Năm điểm luyện công xếp vòng quanh Bia Đá ở giữa Trường Ca Sơn Trang; bot đi vòng 1, 2, 3, 4, 5 rồi về 1, vùng đánh quanh mỗi điểm gần như phủ kín đường nối.">
+<g stroke="var(--line)" stroke-width="1">
+<line x1="40" y1="30" x2="40" y2="440"/><line x1="140" y1="30" x2="140" y2="440"/><line x1="240" y1="30" x2="240" y2="440"/><line x1="340" y1="30" x2="340" y2="440"/><line x1="440" y1="30" x2="440" y2="440"/>
+<line x1="30" y1="50" x2="500" y2="50"/><line x1="30" y1="150" x2="500" y2="150"/><line x1="30" y1="250" x2="500" y2="250"/><line x1="30" y1="350" x2="500" y2="350"/>
+</g>
+<g class="ts"><text class="ts" x="32" y="22">199</text><text class="ts" x="132" y="22">200</text><text class="ts" x="232" y="22">201</text><text class="ts" x="332" y="22">202</text><text class="ts" x="432" y="22">203</text>
+<text class="ts" x="2" y="54">199</text><text class="ts" x="2" y="154">200</text><text class="ts" x="2" y="254">201</text><text class="ts" x="2" y="354">202</text></g>
+<g fill="var(--soft)" fill-opacity=".7" stroke="var(--accent)" stroke-opacity=".35">
+<ellipse cx="272" cy="70" rx="156" ry="78"/><ellipse cx="434" cy="224" rx="156" ry="78"/><ellipse cx="367" cy="400" rx="156" ry="78"/><ellipse cx="115" cy="350" rx="156" ry="78"/><ellipse cx="94" cy="161" rx="156" ry="78"/>
+</g>
+<path d="M272 70L434 224L367 400L115 350L94 161Z" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-dasharray="6 4"/>
+<g fill="var(--accent)"><circle cx="272" cy="70" r="6"/><circle cx="434" cy="224" r="6"/><circle cx="367" cy="400" r="6"/><circle cx="115" cy="350" r="6"/><circle cx="94" cy="161" r="6"/></g>
+<text class="tm" x="282" y="66" font-weight="700">1 · 201/199</text><text class="tm" x="372" y="206" font-weight="700">2 · 202/200</text><text class="tm" x="377" y="424" font-weight="700">3 · 202/202</text><text class="tm" x="58" y="378" font-weight="700">4 · 199/202</text><text class="tm" x="44" y="146" font-weight="700">5 · 199/200</text>
+<rect x="241" y="206" width="14" height="14" fill="var(--warn)"/>
+<text class="tw" x="196" y="240" font-weight="700">Bia Đá 200/200</text>
+</svg>
+<figcaption>Trong sơn trang: 5 điểm luyện công quanh Bia Đá (toạ độ như game hiện). Vùng xanh là tầm đánh quanh mỗi điểm. Bia Đá ở giữa là lối ra duy nhất (sơn trang cấm phù về thành, Thổ Địa Phù, Tiên Thảo Lộ).</figcaption>
+</figure>
 <ol>
 <li><b>Tập trung.</b> Người mở tới NPC ở thành đã chọn; các thành viên bỏ việc đang làm và tới ngay. Mỗi người hỏi NPC "Kiểm tra thời gian tu luyện".</li>
 <li><b>Đồng bộ điều kiện.</b> Người mở chờ tối đa 10 phút cho cả danh sách vào đội và có số thời gian. Số Tín Vật dùng = theo thời gian tu luyện <b>còn ít nhất</b> trong nhóm (mỗi Tín Vật 2 giờ), không quá Giờ mở tối đa, số Tín Vật đang có và 3 Tín Vật mỗi ngày.</li>
 <li><b>Huỷ chuyến</b> khi: có người còn dưới 2 giờ tu luyện (người mở cần hơn 2 giờ), quá 10 phút vẫn thiếu người, hoặc có người đã xong Trường Ca hôm nay. Cả nhóm tính là xong hôm nay và quay về Luyện công / tác vụ đang tick; hôm sau tự thử lại.</li>
 <li><b>Mở.</b> Người mở chọn "Ta muốn mở Trường Ca Sơn Trang", vào sơn trang, rồi ra qua Bia Đá nộp thêm Tín Vật ("Tăng thời gian Trường Ca Sơn Trang đã mở") và vào lại. Các thành viên vào bằng "Ta muốn vào Trường Ca Sơn Trang đã mở" → dòng tên người mở → "Vào".</li>
-<li><b>Trong sơn trang.</b> Luyện công quanh 5 điểm (chưa có quái thì đứng chờ ở điểm gần nhất). Dùng hàng kỹ năng / vật phẩm có Hoạt động "Trường Ca" nếu có, không thì hàng Luyện công. Các tác vụ khác tạm tắt. Luôn chung tổ đội với người mở.</li>
+<li><b>Trong sơn trang.</b> Luyện công quanh 5 điểm theo đúng luật Luyện công của từng nhân vật: quây quái, acc có bùa đánh bùa trước, quây theo đội trưởng (người mở). Chưa có quái thì đứng chờ ở điểm gần nhất; điểm thấy trống từ xa thì bỏ qua. Dùng hàng kỹ năng / vật phẩm có Hoạt động "Trường Ca" nếu có, không thì hàng Luyện công. Các tác vụ khác tạm tắt. Luôn chung tổ đội với người mở.</li>
 <li><b>Máu thấp, cần về thành.</b> Sơn trang cấm phù về thành, Thổ Địa Phù, Tiên Thảo Lộ. Máu dưới mốc TĐP, hết bình, đầy túi…: bot chạy ra Bia Đá, mua đồ, hồi máu rồi vào lại.</li>
 <li><b>Rớt mạng, chết, bị đưa ra.</b> Vào lại cùng cách. Người vào lại bị game xếp vào đội cũ thì tự rời ra, vào đội người mở. Không còn thấy tên người mở trong danh sách (sơn trang hết giờ) thì xong hôm nay.</li>
 </ol>
